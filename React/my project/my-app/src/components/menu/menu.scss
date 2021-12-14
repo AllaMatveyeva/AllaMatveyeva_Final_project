@@ -1,0 +1,33 @@
+.menu__buttons {
+  max-width: 100px;
+  margin: 100px;
+  // 670:margin 50px, margin-right: 100px;
+  @media (max-width: 700px) {
+    display: flex;
+    margin: 50px;
+  }
+}
+.menu__button {
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: var(--menu);
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  @media (max-width: 700px) {
+    &:last-child {
+      margin-bottom: 20px;
+    }
+    margin-right: 5px;
+  }
+}
+
+.link {
+  color: var(--text);
+}
+.active {
+  font-weight: bolder;
+}

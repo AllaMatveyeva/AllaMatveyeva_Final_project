@@ -1,0 +1,21 @@
+.alphabet-block {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.alphabet-block__letter {
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ffba5b;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: initial;
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0px;
+  }
+  .helper__text {
+    color: var(--text);
+  }
+}

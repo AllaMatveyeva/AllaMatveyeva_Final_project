@@ -1,0 +1,13 @@
+.books-link {
+  // display: flex;
+}
+.books-link__item {
+  margin-right: 15px;
+  color: var(--text);
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+.book-item {
+  margin-bottom: 5px;
+}

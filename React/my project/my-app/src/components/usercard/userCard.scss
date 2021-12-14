@@ -1,0 +1,41 @@
+main {
+  background-image: var(--background-image);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 30px;
+  justify-content: center;
+}
+.userCard {
+  margin: 20px;
+  width: 250px;
+  padding: 10px;
+  background-color: var(--background-card);
+  color: var(--text);
+  font-size: medium;
+
+  border-radius: 10%;
+  height: fit-content;
+  min-height: 140px;
+  cursor: pointer;
+
+  .userCard__title {
+    margin: 5px;
+    margin-top: 10px;
+    font-size: medium;
+    text-align: center;
+  }
+  .title_name {
+    color: var(--text);
+    font-size: medium;
+  }
+  .name {
+    font-size: medium;
+    padding-top: 20px;
+  }
+}
