@@ -17,6 +17,7 @@ function MoviesCard(props) {
     return (
       <>
         <div className="quotes-author title-name">
+          <hr className="hr"></hr>
           <p>{title.name}</p>
         </div>
         <hr className="hr"></hr>

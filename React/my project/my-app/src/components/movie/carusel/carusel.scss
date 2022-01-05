@@ -1,12 +1,9 @@
 .box {
   margin: auto;
+  &:hover {
+    cursor: pointer;
+  }
 }
-// .css-rh92k-MuiPaper-root-MuiMobileStepper-root {
-//   background-color: var(--background-card) !important;
-// }
-// .css-1wyfbbo-MuiPaper-root {
-//   background-color: var(--background-card) !important;
-// }
 .paper {
   background-color: var(--background-card) !important;
   color: var(--text) !important;

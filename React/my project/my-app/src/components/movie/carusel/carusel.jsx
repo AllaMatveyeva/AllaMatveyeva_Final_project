@@ -12,6 +12,7 @@ import { autoPlay } from "react-swipeable-views-utils";
 
 import "./carusel.scss";
 import "../../../styles/colors.scss";
+import { useState } from "react";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -21,7 +22,7 @@ function SwipeableTextMobileStepper(props) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = props.images.length;
-
+  const [pause, setPause] = useState(false);
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
@@ -31,7 +32,9 @@ function SwipeableTextMobileStepper(props) {
   };
 
   const handleStepChange = (step) => {
-    setActiveStep(step);
+    if (!pause) {
+      setActiveStep(step);
+    }
   };
 
   return (
@@ -62,9 +65,11 @@ function SwipeableTextMobileStepper(props) {
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
+                onMouseOver={() => setPause(true)}
+                onMouseOut={() => setPause(false)}
                 component="img"
                 sx={{
-                  height: 300,
+                  height: 330,
                   display: "block",
                   maxWidth: 600,
                   overflow: "hidden",
