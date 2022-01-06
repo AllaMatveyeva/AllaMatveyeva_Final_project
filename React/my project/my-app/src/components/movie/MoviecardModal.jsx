@@ -1,5 +1,5 @@
 import ModalWindow from "../modalWindow/modal";
-import { plotArr } from "../resources/plotArr";
+import Plot from "../resources/plotArr";
 import "./MoviecardModal.scss";
 
 function MoviecardModal(props) {
@@ -9,10 +9,7 @@ function MoviecardModal(props) {
     <>
       <ModalWindow onClose={onClose}>
         <div className="plot">
-          {plotArr.map(
-            (plot) =>
-              plot.name === target && <p className="plot">{plot.story}</p>
-          )}
+          <Plot target={target}></Plot>
         </div>
       </ModalWindow>
     </>

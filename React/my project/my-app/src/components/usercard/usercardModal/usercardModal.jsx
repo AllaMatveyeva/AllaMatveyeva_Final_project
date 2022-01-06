@@ -47,9 +47,11 @@ function UsercardModal(props) {
   return (
     <>
       <ModalWindow title={`${user.name} `} onClose={onClose}>
-        <a className="link" href={user.wikiUrl}>
-          User profile
-        </a>
+        {user.wikiUrl && (
+          <a className="link" href={user.wikiUrl}>
+            User profile
+          </a>
+        )}
         <div className="user-img">
           <GetImg index={index} />
         </div>

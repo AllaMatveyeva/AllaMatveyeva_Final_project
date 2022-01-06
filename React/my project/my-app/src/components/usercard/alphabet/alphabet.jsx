@@ -22,6 +22,7 @@ function Alphabet(props) {
   function getLetter(e) {
     setLetter(e.target.innerText);
   }
+
   return (
     <>
       <div className="alphabet-block" onClick={(e) => getLetter(e)}>

@@ -16,8 +16,8 @@ function BookCard(props) {
       >
         <div className="bookCard__item bookCard__img-container">
           <img className=" book__image" src={book.Image} alt="Book"></img>
+          <p className="bookCard__item bookCard__title name">{book.Name}</p>
         </div>
-        <p className="bookCard__item bookCard__title name">{book.Name}</p>
       </div>
 
       {showModal && (

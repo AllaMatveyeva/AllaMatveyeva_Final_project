@@ -9,7 +9,7 @@ import "./books.scss";
 
 const booksArr = [
   {
-    Name: "The Hobbit",
+    Name: "The Hobbit, or There and Back Again",
     Author: "J.R.R. Tolkien",
     Released: "September 21, 1937",
     Image: `${book_hobbit}`,
