@@ -1,0 +1,14 @@
+.home__welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate;
+  transform: translate;
+  max-width: 400px;
+  transform: translate(-50%, -50%);
+}
+.home__welcome__text {
+  font-size: 40px;
+  text-align: center;
+  color: var(--text);
+}

@@ -1,0 +1,20 @@
+[data-theme="light"] {
+  --background-image: url(D:\teachme\Final project\React\my project\my-app\src/lord.jpg);
+  --background-card: #ada185;
+  --background-header: #ada185;
+  --background-footer: #ada185;
+  --text: #fafafa;
+  --text-letter: wheat;
+  --icon-theme: #fafafa;
+  --menu: #c9c6bd;
+}
+[data-theme="dark"] {
+  --background-image: url(D:\teachme\Final project\React\my project\my-app\src/Lord_Of_The_Rings_423432342342324234432432.jpg);
+  --background: #212121;
+  --background-card: rgb(2, 35, 83);
+  --background-header: rgb(15, 12, 46);
+  --background-footer: rgb(15, 12, 46);
+  --text: #ffba5b;
+  --icon-theme: #ffba5b;
+  --menu: #102952;
+}

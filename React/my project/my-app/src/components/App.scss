@@ -1,0 +1,16 @@
+@import "../styles/colors.scss";
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.section {
+  flex: 1 0 auto;
+  background-image: var(--background-image);
+  display: flex;
+  // justify-content: center;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+}
