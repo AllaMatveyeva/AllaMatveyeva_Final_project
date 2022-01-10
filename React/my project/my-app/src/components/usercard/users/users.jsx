@@ -29,7 +29,7 @@ function Users(props) {
 
   return (
     <>
-      <div className="users-block">
+      <ul className="users-block">
         {isLoading && <Loader />}
         {isError && "Error"}
         {!isLoading &&
@@ -37,7 +37,7 @@ function Users(props) {
           users.map((user, index) => (
             <UserCard key={user._id} user={user} index={index} />
           ))}
-      </div>
+      </ul>
     </>
   );
 }

@@ -1,14 +1,18 @@
 .menu__buttons {
   max-width: 100px;
-  margin: 100px;
+  // margin: 100px;
+  margin-left: 30px;
+  position: absolute;
+  top: 50%;
 
-  // @media (max-width: 700px) {
-  //   display: flex;
-  //   margin: 50px;
-  // }
+  transform: translateY(-50%);
+  @media (max-width: 700px) {
+    display: flex;
+    margin: 50px;
+  }
 }
 .menu__button {
-  padding: 20px 30px;
+  padding: 1.42857rem 2.142857rem;
   margin-bottom: 20px;
   border-radius: 10px;
   background-color: var(--menu);

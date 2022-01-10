@@ -6,6 +6,7 @@ import book_towers from "../../../img/book_towers.jpg";
 import book_return from "../../../img/book_return.jpg";
 
 import "./books.scss";
+import { useEffect } from "react";
 
 const booksArr = [
   {
@@ -49,6 +50,9 @@ const booksArr = [
 ];
 
 function Books(props) {
+  useEffect(() => {
+    localStorage.removeItem("letter");
+  });
   return (
     <>
       <div className="books-block">

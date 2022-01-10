@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { withTranslator } from "../../hoc/withTranslator";
 
 import "./home.scss";
 
 function Home(props) {
+  useEffect(() => {
+    localStorage.removeItem("letter");
+  });
+
   return (
     <>
       <div className="home__welcome">

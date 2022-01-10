@@ -5,7 +5,7 @@ import helper from "../../../img/Gandalf.jpeg";
 import "./alphabet.scss";
 
 function Alphabet(props) {
-  const [letter, setLetter] = useState("");
+  const [letter, setLetter] = useState(localStorage.getItem("letter") || "");
   function makeAlphabet() {
     let a = "a".codePointAt(0);
     let z = "z".codePointAt(0);
@@ -21,6 +21,7 @@ function Alphabet(props) {
 
   function getLetter(e) {
     setLetter(e.target.innerText);
+    localStorage.setItem("letter", e.target.innerText);
   }
 
   return (

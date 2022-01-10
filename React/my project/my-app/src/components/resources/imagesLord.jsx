@@ -17,11 +17,11 @@ export const imagesLord = [
     imgPath: arven,
   },
   {
-    label: "The Fellowship of the Ring1",
+    label: "The Fellowship of the Ring",
     imgPath: felowship,
   },
   {
-    label: "The Fellowship of the Ring2",
+    label: "The Fellowship of the Ring",
     imgPath: frends,
   },
   {
@@ -29,15 +29,15 @@ export const imagesLord = [
     imgPath: bird2,
   },
   {
-    label: "The Two Towers1",
+    label: "The Two Towers",
     imgPath: golumn2,
   },
   {
-    label: "The Two Towers2",
+    label: "The Two Towers",
     imgPath: mordor2,
   },
   {
-    label: "The Two Towers3",
+    label: "The Two Towers",
     imgPath: tree2,
   },
   {
@@ -45,11 +45,11 @@ export const imagesLord = [
     imgPath: deads3,
   },
   {
-    label: "The Return of the King1",
+    label: "The Return of the King",
     imgPath: frodo3,
   },
   {
-    label: "The Return of the King2",
+    label: "The Return of the King",
     imgPath: king3,
   },
 ];

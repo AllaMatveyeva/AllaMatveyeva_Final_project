@@ -16,11 +16,11 @@ export const imagesHobbit = [
     imgPath: hobbitForest,
   },
   {
-    label: "The Unexpected Journey1",
+    label: "The Unexpected Journey",
     imgPath: hobbitRing,
   },
   {
-    label: "The Unexpected Journey2",
+    label: "The Unexpected Journey",
     imgPath: hobbitSword,
   },
   {
@@ -28,11 +28,11 @@ export const imagesHobbit = [
     imgPath: hobbit2Legolas,
   },
   {
-    label: "The Desolation of Smaug1",
+    label: "The Desolation of Smaug",
     imgPath: hobbit2Smaug,
   },
   {
-    label: "The Desolation of Smaug2",
+    label: "The Desolation of Smaug",
     imgPath: hobbit2Treasure,
   },
 
@@ -41,11 +41,11 @@ export const imagesHobbit = [
     imgPath: hobbit3Orks,
   },
   {
-    label: "The Battle of the Five Armies1",
+    label: "The Battle of the Five Armies",
     imgPath: hobbit3People,
   },
   {
-    label: "The Battle of the Five Armies2",
+    label: "The Battle of the Five Armies",
     imgPath: hobbit3Bilbo,
   },
 ];

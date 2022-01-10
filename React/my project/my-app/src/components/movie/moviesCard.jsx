@@ -21,7 +21,7 @@ function MoviesCard(props) {
           <p>{title.name}</p>
         </div>
         <hr className="hr"></hr>
-        <div className=" block movies-block hobbit-movies">
+        <div className="users-block movies-block hobbit-movies">
           {Object.entries(items).map((movie, index) => (
             <div
               className="userCard movies-block__item"

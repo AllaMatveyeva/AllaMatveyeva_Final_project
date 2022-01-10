@@ -11,6 +11,10 @@ function Movie(props) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    localStorage.removeItem("letter");
+  });
+
+  useEffect(() => {
     async function fetchData() {
       try {
         const response = await getMovies();

@@ -11,25 +11,24 @@ function UserCard(props) {
 
   return (
     <>
-      <div className="block">
-        <div className="userCard" onClick={() => setIsShowModal(true)}>
-          {user.name && (
-            <p className="userCard__title name">
-              <span className="title_name">name: {user.name}</span>
-            </p>
-          )}
-          {!(user.race === "NaN" || user.race === "") && (
-            <p className="userCard__title race">
-              <span className="title_name">race: {user.race}</span>
-            </p>
-          )}
-          {!(user.gender === "NaN" || user.gender === "") && (
-            <p className="userCard__title gender">
-              <span className="title_name">gender: {user.gender}</span>
-            </p>
-          )}
-        </div>
-      </div>
+      <li className="userCard" onClick={() => setIsShowModal(true)}>
+        {user.name && (
+          <p className="userCard__title name">
+            <span className="title_name">name: {user.name}</span>
+          </p>
+        )}
+        {!(user.race === "NaN" || user.race === "") && (
+          <p className="userCard__title race">
+            <span className="title_name">race: {user.race}</span>
+          </p>
+        )}
+        {!(user.gender === "NaN" || user.gender === "") && (
+          <p className="userCard__title gender">
+            <span className="title_name">gender: {user.gender}</span>
+          </p>
+        )}
+      </li>
+
       {showModal && (
         <UsercardModal
           user={user}
