@@ -14,7 +14,9 @@
 }
 .movies-block__item {
   width: 300px;
-  // margin-top: 50px;
+  @media (max-width: 68px) {
+    width: 200px;
+  }
 }
 .movie-item_title {
   text-align: center;

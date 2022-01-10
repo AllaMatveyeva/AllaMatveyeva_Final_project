@@ -4,6 +4,9 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   margin-left: 20%;
+  @media (max-width: 950px) {
+    margin-left: 0%;
+  }
 }
 
 .userCard {
@@ -25,7 +28,9 @@ main {
     text-shadow: -1px -1px 0 rgb(39, 6, 6);
     transition: all 250ms linear;
   }
-
+  @media (max-width: 950px) {
+    width: 150px;
+  }
   .userCard__title {
     margin-top: 10px;
     font-size: medium;

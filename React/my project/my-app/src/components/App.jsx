@@ -12,14 +12,17 @@ import Menu from "./menu/menu";
 import Movie from "./movie/movie";
 
 import "./App.scss";
+import MenuSmall from "./menuSmall/menuSmall";
 
 function App({ setThemeFromStore }) {
   useEffect(() => setThemeFromStore(), []);
+  // const screenWidth = window.screen.width;
 
   return (
     <div className="App">
       <Header />
       <div className="section">
+        {/* {screenWidth >= 950 ? <Menu /> : <MenuSmall />} */}
         <Menu />
         <main>
           <Routes>
