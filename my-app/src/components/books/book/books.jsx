@@ -53,6 +53,7 @@ function Books(props) {
   useEffect(() => {
     localStorage.removeItem("letter");
   });
+  
   return (
     <>
       <div className="books-block">
