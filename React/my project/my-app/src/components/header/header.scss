@@ -3,9 +3,16 @@
   display: flex;
   justify-content: space-around;
   background-color: var(--background-header);
+  align-items: center;
+
+  .login {
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
 
   .header-item__link {
-    display: flex;
   }
   .header__button-link {
     border: none;
@@ -39,7 +46,7 @@
     border: none;
     border-radius: 10px;
     background-color: var(--menu);
-    margin-right: 5px;
+    margin-right: 10px;
     color: var(--text);
     font-size: 0.9rem;
     cursor: pointer;
@@ -68,4 +75,21 @@
       transition: all 250ms linear;
     }
   }
+}
+.buttons-help {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.buttons-help__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0px;
+    margin-left: 100px;
+  }
+}
+.user-name {
+  color: var(--text);
+  font-weight: 1rem;
 }

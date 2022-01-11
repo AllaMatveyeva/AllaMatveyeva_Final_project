@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import UserCard from "../userCard";
 import "./users.scss";
 
-import { getUsers } from "../../../api/api";
+import { getComers } from "../../../api/api";
 
 import Loader from "../../../api/loader";
 
@@ -15,7 +15,7 @@ function Users(props) {
     console.log(props.letter);
     async function fetchData() {
       try {
-        const response = await getUsers(`${props.letter}`);
+        const response = await getComers(`${props.letter}`);
         setUsers(response.data.docs);
       } catch (e) {
         setIsError(true);

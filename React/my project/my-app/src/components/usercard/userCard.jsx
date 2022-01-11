@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import UsercardModal from "./usercardModal/usercardModal";
 import "./userCard.scss";
+import { withMe } from "../../hoc/withMe";
 
 function UserCard(props) {
   const { user, index } = props;

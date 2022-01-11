@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getUsers = (letter) =>
+export const getComers = (letter) =>
   axios.get(`https://the-one-api.dev/v2/character?name=/^${letter}{1}./i`, {
     headers: {
       Authorization: "Bearer VE3TQswW4reG5Luwm85f",
