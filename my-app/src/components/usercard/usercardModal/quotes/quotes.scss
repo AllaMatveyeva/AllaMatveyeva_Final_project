@@ -1,0 +1,15 @@
+.quotes-block {
+  display: flex;
+  // flex-direction: column;
+  // align-content: space-around;
+  // max-width: 500px;
+  // margin: auto;
+  flex-wrap: wrap;
+}
+.quotes-author {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 2.14rem;
+  margin-left: 30%;
+  color: var(--text);
+}

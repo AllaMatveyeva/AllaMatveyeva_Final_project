@@ -1,0 +1,26 @@
+.title-name {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+.hr {
+  color: var(--text);
+}
+.movies-block {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.movies-block__item {
+  width: 300px;
+  @media (max-width: 68px) {
+    width: 200px;
+  }
+}
+.movie-item_title {
+  text-align: center;
+}
+.carousel {
+  background-color: var(--text);
+}

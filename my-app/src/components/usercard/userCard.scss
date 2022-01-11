@@ -1,0 +1,46 @@
+main {
+  background-image: var(--background-image);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 20%;
+  @media (max-width: 950px) {
+    margin-left: 0%;
+  }
+}
+
+.userCard {
+  margin: 20px;
+  width: 250px;
+  padding: 10px;
+  background-color: var(--background-card);
+  color: var(--text);
+
+  border-radius: 10%;
+  height: fit-content;
+  min-height: 140px;
+  cursor: pointer;
+  &:hover {
+    background: rgb(134, 61, 61);
+    border: 1px solid rgba(#000, 0.05);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+
+    text-shadow: -1px -1px 0 rgb(39, 6, 6);
+    transition: all 250ms linear;
+  }
+  @media (max-width: 950px) {
+    width: 150px;
+  }
+  .userCard__title {
+    margin-top: 10px;
+    font-size: medium;
+    text-align: center;
+  }
+  .title_name {
+    color: var(--text);
+    font-size: 1.1666rem;
+  }
+  .name {
+    font-size: medium;
+  }
+}

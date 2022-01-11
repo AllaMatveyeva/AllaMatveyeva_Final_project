@@ -1,0 +1,26 @@
+.alphabet-block {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.alphabet-block__letter {
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ffba5b;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: initial;
+  color: var(--text);
+  font-size: 1.42857rem;
+  cursor: pointer;
+  &:hover {
+    background: rgb(134, 61, 61);
+    border: 1px solid rgba(#000, 0.05);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: red;
+    text-shadow: -1px -1px 0 rgb(39, 6, 6);
+    transition: all 250ms linear;
+  }
+  &:last-child {
+    margin-right: 0px;
+  }
+}

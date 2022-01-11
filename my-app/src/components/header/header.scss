@@ -1,0 +1,95 @@
+.header {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--background-header);
+  align-items: center;
+
+  .login {
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  .header-item__link {
+  }
+  .header__button-link {
+    border: none;
+    outline: none;
+    outline: none;
+    background: none;
+    &:hover {
+      background: rgb(134, 61, 61);
+      border: 1px solid rgba(#000, 0.05);
+      box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+      color: red;
+      text-shadow: -1px -1px 0 rgb(39, 6, 6);
+      transition: all 250ms linear;
+    }
+  }
+  .link {
+    margin-right: 200px;
+    color: var(--text);
+    font-size: 1rem;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  .logotype {
+    filter: drop-shadow(0.8rem 0.35rem 0.8rem rgba(253, 27, 38, 0.84));
+    height: 50px;
+    width: 30px;
+  }
+  .button-translate {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--menu);
+    margin-right: 10px;
+    color: var(--text);
+    font-size: 0.9rem;
+    cursor: pointer;
+    &:hover {
+      background: rgb(134, 61, 61);
+      border: 1px solid rgba(#000, 0.05);
+      box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+      color: red;
+      text-shadow: -1px -1px 0 rgb(39, 6, 6);
+      transition: all 250ms linear;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  .ligth-svg {
+    fill: var(--icon-theme);
+    cursor: pointer;
+    font-size: 50px;
+    &:hover {
+      background: rgb(134, 61, 61);
+      border: 1px solid rgba(#000, 0.05);
+      box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+      color: red;
+      text-shadow: -1px -1px 0 rgb(39, 6, 6);
+      transition: all 250ms linear;
+    }
+  }
+}
+.buttons-help {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.buttons-help__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0px;
+    margin-left: 100px;
+  }
+}
+.user-name {
+  color: var(--text);
+  font-weight: 1rem;
+}
