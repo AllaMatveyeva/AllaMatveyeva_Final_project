@@ -24,29 +24,25 @@ function App({ setThemeFromStore }) {
   };
 
   useEffect(() => setThemeFromStore(), []);
-  // const screenWidth = window.screen.width;
 
   return (
-    <AuthContext.Provider value={{ me, setMe }}>
-      <div className="App">
-        <Header />
-        <div className="section">
-          {/* {screenWidth >= 950 ? <Menu /> : <MenuSmall />} */}
-          <Menu />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="alphabet" element={<Alphabet />} />
-              <Route path="books" element={<Books />} />
-              <Route path="movies" element={<Movie />} />
-              <Route path="characters/:id/quotes" element={<Quotes />} />
-            </Routes>
-          </main>
-        </div>
-        <Footer />
+    <div className="App">
+      <Header />
+      <div className="section">
+        <Menu />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="alphabet" element={<Alphabet />} />
+            <Route path="books" element={<Books />} />
+            <Route path="movies" element={<Movie />} />
+            <Route path="characters/:id/quotes" element={<Quotes />} />
+          </Routes>
+        </main>
       </div>
-    </AuthContext.Provider>
+      <Footer />
+    </div>
   );
 }
 

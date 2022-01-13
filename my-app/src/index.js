@@ -1,3 +1,4 @@
+import "./mocks/browser";
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -7,9 +8,9 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import serviceWorker from "msw";
 import store from "./store/store";
-if (process.env.NODE_ENV === "development") {
-  require("./mocks/browser");
-}
+// if (process.env.NODE_ENV === "development") {
+//   require("./mocks/browser");
+// }
 
 ReactDOM.render(
   <Provider store={store}>
