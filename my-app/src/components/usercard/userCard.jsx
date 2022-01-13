@@ -4,6 +4,8 @@ import UsercardModal from "./usercardModal/usercardModal";
 import "./userCard.scss";
 import { withMe } from "../../hoc/withMe";
 
+import { connect } from "react-redux";
+
 function UserCard(props) {
   const { user, index } = props;
 
@@ -41,4 +43,5 @@ function UserCard(props) {
     </>
   );
 }
+
 export default UserCard;

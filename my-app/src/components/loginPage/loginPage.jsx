@@ -55,10 +55,10 @@ const LoginPage = ({ me, setMe }) => {
         <CardContent>
           {/* {error && <span>{error}</span>} */}
           <TextField
+            className="text-field"
             value={login}
             onChange={handleInput(setLogin)}
             error={!!error}
-            className="text-field"
             fullWidth
             label="Login"
             placeholder="Input name"
@@ -77,6 +77,7 @@ const LoginPage = ({ me, setMe }) => {
           />
 
           <Button
+            className="button-login"
             onClick={handleSubmit}
             endIcon={loading ? <Loader /> : undefined}
             disabled={loading || !!error}

@@ -1,5 +1,5 @@
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-import { Link } from "@mui/material";
+
 import { NavLink } from "react-router-dom";
 import { withTheme } from "../../hoc/theme";
 import { withMe } from "../../hoc/withMe";
@@ -21,9 +21,9 @@ function Header(props) {
       </div>
       <div className=" header-item__link">
         <button className="header__button-link">
-          <a className="link" href="/">
+          <NavLink className="link" to="/">
             {props.translate("header.links.home")}
-          </a>
+          </NavLink>
         </button>
       </div>
       <div className="buttons-help">
