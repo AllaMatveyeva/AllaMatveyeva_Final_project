@@ -5,13 +5,13 @@ import AuthContext from "./contexts/AuthContext";
 import Footer from "./footer/footer";
 import Header from "./header/header";
 import Home from "./home/home";
-import Alphabet from "./usercard/alphabet/alphabet";
+import Alphabet from "./charactersCard/alphabet/alphabet";
 import Books from "./books/book/books";
-import Quotes from "../components/usercard/usercardModal/quotes/quotes";
+import Quotes from "../components/charactersCard/charactersCardModal/quotes/quotes";
 import { withTheme } from "../hoc/theme";
 import Menu from "./menu/menu";
 import Movie from "./movie/movie";
-import MenuSmall from "./menuSmall/menuSmall";
+
 import LoginPage from "./loginPage/loginPage";
 import "./App.scss";
 

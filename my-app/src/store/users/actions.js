@@ -2,7 +2,7 @@ export const FETCH_USERS = "users/FETCH_USERS";
 export const SET_FETCH_USERS_STATUS = "users/SET_FETCH_USERS_STATUS";
 export const SET_USERS = "users/SET_USERS";
 
-export const fetchUsers = () => ({
+export const fetchUsers = (letter) => ({
   type: FETCH_USERS,
 });
 

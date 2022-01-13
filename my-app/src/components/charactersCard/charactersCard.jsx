@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import UsercardModal from "./usercardModal/usercardModal";
-import "./userCard.scss";
+import CharactersCardModal from "./charactersCardModal/charactersCardModal";
+import "./charactersCard.scss";
 import { withMe } from "../../hoc/withMe";
 
 import { connect } from "react-redux";
 
-function UserCard(props) {
+function CharactersCard(props) {
   const { user, index } = props;
 
   const { id } = useParams();
@@ -33,7 +33,7 @@ function UserCard(props) {
       </li>
 
       {showModal && (
-        <UsercardModal
+        <CharactersCardModal
           user={user}
           index={index}
           onClose={() => setIsShowModal(false)}
@@ -44,4 +44,4 @@ function UserCard(props) {
   );
 }
 
-export default UserCard;
+export default CharactersCard;

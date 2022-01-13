@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import UserCard from "../userCard";
-import "./users.scss";
+
+import CharactersCard from "../charactersCard";
+import "./characters.scss";
 
 import { getComers } from "../../../api/api";
 
 import Loader from "../../../api/loader";
 
-function Users(props) {
-  const [users, setUsers] = useState({});
+function Characters(props) {
+  const [characters, setcharacters] = useState({});
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -16,7 +17,7 @@ function Users(props) {
     async function fetchData() {
       try {
         const response = await getComers(`${props.letter}`);
-        setUsers(response.data.docs);
+        setcharacters(response.data.docs);
       } catch (e) {
         setIsError(true);
       } finally {
@@ -34,12 +35,12 @@ function Users(props) {
         {isError && "Error"}
         {!isLoading &&
           !isError &&
-          users.map((user, index) => (
-            <UserCard key={user._id} user={user} index={index} />
+          characters.map((user, index) => (
+            <CharactersCard key={user._id} user={user} index={index} />
           ))}
       </ul>
     </>
   );
 }
 
-export default Users;
+export default Characters;

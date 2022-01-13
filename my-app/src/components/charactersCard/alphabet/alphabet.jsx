@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Users from "../users/users";
+import Characters from "../characters/characters";
 import { withTranslator } from "../../../hoc/withTranslator";
 import helper from "../../../img/Gandalf.jpeg";
 import "./alphabet.scss";
@@ -39,7 +39,7 @@ const Alphabet = (props) => {
       {
         <>
           {letter ? (
-            <Users letter={letter}></Users>
+            <Characters letter={letter}></Characters>
           ) : (
             <div className="change-letter">
               <img
