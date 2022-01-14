@@ -8,6 +8,7 @@ import { withAuth } from "../../../hoc/withAuth";
 
 const Alphabet = (props) => {
   const [letter, setLetter] = useState(localStorage.getItem("letter") || "");
+
   function makeAlphabet() {
     let a = "a".codePointAt(0);
     let z = "z".codePointAt(0);
@@ -21,14 +22,23 @@ const Alphabet = (props) => {
     return arrLetter.map((item) => String.fromCodePoint(item));
   }
 
+  function changeClassLetter(letter) {
+    const actives = document.querySelector(".actives");
+    if (actives) {
+      actives.classList.remove("actives");
+    }
+    letter.classList.add("actives");
+  }
+
   function getLetter(e) {
-    setLetter(e.target.innerText);
-    localStorage.setItem("letter", e.target.innerText);
+    setLetter(e.innerText);
+    localStorage.setItem("letter", e.innerText);
+    changeClassLetter(e);
   }
 
   return (
     <>
-      <div className="alphabet-block" onClick={(e) => getLetter(e)}>
+      <div className="alphabet-block" onClick={(e) => getLetter(e.target)}>
         {makeAlphabet().map((item, index) => (
           <button type="button" className="alphabet-block__letter" key={index}>
             {item}
