@@ -1,22 +1,17 @@
 import React, { useEffect, useState } from "react";
-import usePagination from "@mui/material/usePagination/usePagination";
-import CharactersCard from "../charactersCard";
-import "./characters.scss";
-
-import { getComers } from "../../../api/api";
-
-import Loader from "../../../api/loader";
 import { useDispatch, useSelector } from "react-redux";
+
+import CharactersCard from "../charactersCard";
+import { getComers } from "../../../api/api";
+import Loader from "../../../api/loader";
 import { changeCharacters } from "../../../store/characters/actions";
-import store from "../../../store/store";
 import { response } from "msw";
 import { withTranslator } from "../../../hoc/withTranslator";
-
-import Paginations from "../../../pagination/pagination";
 import UsePagination from "../../../pagination/pagination";
 
+import "./characters.scss";
+
 function Characters(props) {
-  // const [characters, setcharacters] = useState({});
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
@@ -36,13 +31,10 @@ function Characters(props) {
   });
 
   useEffect(() => {
-    console.log(props.letter);
     async function fetchData() {
       try {
         const response = await getComers(`${props.letter}`);
         dispatch(changeCharacters(response.data.docs));
-
-        console.log(store.getState().characters.characters.slice(0, 5));
       } catch (e) {
         if (response.status === "429") {
           setIsError("429");
@@ -53,7 +45,6 @@ function Characters(props) {
         setIsLoading(false);
       }
     }
-
     fetchData();
   }, [props.letter]);
 
@@ -76,9 +67,6 @@ function Characters(props) {
               ))}
           </ul>
           <div className="pagination">
-            <p className="text">
-              {page}/{totalPages}
-            </p>
             <button
               onClick={prevPage}
               className={`page ${page === 1 && "disabled"}`}
@@ -90,7 +78,7 @@ function Characters(props) {
               <button
                 onClick={() => setPage(el + 1)}
                 key={el}
-                className={`page ${page === el + 1 ? "active" : ""}`}
+                className={`page ${page === el + 1 ? "active-page" : ""}`}
               >
                 {el + 1}
               </button>
@@ -107,29 +95,4 @@ function Characters(props) {
     </>
   );
 }
-
-//{
-
-//   /* <ul className="users-block">
-//         {isLoading && <Loader />}
-//         {isError === "429" && "Too many requests, please try again later."}
-//         {isError && "Error"}
-//         {!isLoading && !isError && characters.length === 0 ? (
-//           <span className="home__welcome home__welcome__text">
-//             {props.translate("not.letter")}
-//           </span>
-//         ) : (
-//           characters
-//             .slice(0, 10)
-//             .map((user, index) => (
-//               <CharactersCard key={user._id} user={user} index={index} />
-//             ))
-//         )}
-//       </ul>
-//       <UsePagination length={characters.length} characters={characters} /> */
-// }
-// // </>
-// //   );
-// // }
-
 export default withTranslator(Characters);
