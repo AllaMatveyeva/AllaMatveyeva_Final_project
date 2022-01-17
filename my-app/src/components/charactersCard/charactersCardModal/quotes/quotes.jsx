@@ -6,6 +6,7 @@ import QuotesPage from "./quotesPage";
 import Loader from "../../../../api/loader";
 
 import "./quotes.scss";
+import store from "../../../../store/store";
 
 function Quotes() {
   console.log(useParams());
@@ -17,6 +18,25 @@ function Quotes() {
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+  // const unsubscribe = store.subscribe(() => store.getState());
+
+  // console.log(unsubscribe());
+
+  const charactersFromStore = store.getState().characters;
+  function quotesAuthor() {
+    if (
+      charactersFromStore.characters.length === 0 ||
+      !charactersFromStore.characters
+    ) {
+      return localStorage.getItem(`quotesAuthor_${id}`) || null;
+    } else {
+      const characterWithId = charactersFromStore.characters.filter(
+        (item) => item._id === id
+      );
+      localStorage.setItem(`quotesAuthor_${id}`, characterWithId[0].name);
+      return characterWithId[0].name;
+    }
+  }
   useEffect(() => {
     async function fetchData() {
       try {
@@ -35,9 +55,7 @@ function Quotes() {
 
   return (
     <>
-      <span className="quotes-author">
-        {localStorage.getItem(`character_${id}`)}
-      </span>
+      <span className="quotes-author">{quotesAuthor()}</span>
       <ul className="quotes-block">
         {isLoading && <Loader />}
         {isError && "Error"}

@@ -1,8 +1,10 @@
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-import { Link } from "@mui/material";
+
 import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../store/auth/actions";
 import { withTheme } from "../../hoc/theme";
-import { withMe } from "../../hoc/withMe";
+
 import { withTranslator } from "../../hoc/withTranslator";
 
 import Logotype from "../../img/logotype.png";
@@ -14,6 +16,9 @@ function Header(props) {
   };
   console.log(props);
 
+  const dispatch = useDispatch();
+  const account = useSelector((state) => state.auth.account);
+
   return (
     <header className="header">
       <div className="header-item">
@@ -21,9 +26,9 @@ function Header(props) {
       </div>
       <div className=" header-item__link">
         <button className="header__button-link">
-          <a className="link" href="/">
+          <NavLink className="link" to="/">
             {props.translate("header.links.home")}
-          </a>
+          </NavLink>
         </button>
       </div>
       <div className="buttons-help">
@@ -48,10 +53,10 @@ function Header(props) {
           </button>
         </div>
         <div className="buttons-help__item ">
-          {props.me ? (
+          {!!account ? (
             <button
               className="login button-translate"
-              onClick={() => props.setMe(null)}
+              onClick={() => dispatch(logout())}
             >
               Logout
             </button>
@@ -60,9 +65,9 @@ function Header(props) {
               Login
             </NavLink>
           )}
-          {props.me && (
+          {!!account && (
             <span className="buttons-help__item login user-name">
-              User: {props.me.login}
+              User: {account.login}
             </span>
           )}
         </div>
@@ -74,4 +79,4 @@ function Header(props) {
     </header>
   );
 }
-export default withMe(withTheme(withTranslator(Header)));
+export default withTheme(withTranslator(Header));

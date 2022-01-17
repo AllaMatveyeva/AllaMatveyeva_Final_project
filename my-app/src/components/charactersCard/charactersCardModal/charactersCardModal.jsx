@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./usercardModal.scss";
+import "./charactersCardModal.scss";
 
 import ModalWindow from "../../modalWindow/modal";
 
@@ -12,12 +12,12 @@ import male1 from "../../../img/male1.jpg";
 import male2 from "../../../img/male2.jpg";
 import male3 from "../../../img/male3.jpg";
 
-function UsercardModal(props) {
+function CharactersCardModal(props) {
   const { user, index, onClose } = props;
   let key = user._id;
   console.log(key);
 
-  localStorage.setItem(`character_${key}`, user.name);
+  //localStorage.setItem(`character_${key}`, user.name);
 
   const [length, setLength] = useState("");
 
@@ -75,4 +75,4 @@ function UsercardModal(props) {
   );
 }
 
-export default UsercardModal;
+export default CharactersCardModal;

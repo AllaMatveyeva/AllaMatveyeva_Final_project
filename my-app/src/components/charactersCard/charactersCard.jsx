@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import UsercardModal from "./usercardModal/usercardModal";
-import "./userCard.scss";
-import { withMe } from "../../hoc/withMe";
+import CharactersCardModal from "./charactersCardModal/charactersCardModal";
+import "./charactersCard.scss";
 
-function UserCard(props) {
+function CharactersCard(props) {
   const { user, index } = props;
 
   const { id } = useParams();
   const [showModal, setIsShowModal] = useState(false);
-
+  localStorage.setItem("persona", JSON.stringify(user));
   return (
     <>
       <li className="userCard" onClick={() => setIsShowModal(true)}>
@@ -31,7 +30,7 @@ function UserCard(props) {
       </li>
 
       {showModal && (
-        <UsercardModal
+        <CharactersCardModal
           user={user}
           index={index}
           onClose={() => setIsShowModal(false)}
@@ -41,4 +40,5 @@ function UserCard(props) {
     </>
   );
 }
-export default UserCard;
+
+export default CharactersCard;

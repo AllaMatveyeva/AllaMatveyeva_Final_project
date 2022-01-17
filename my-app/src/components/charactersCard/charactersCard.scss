@@ -4,6 +4,7 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   margin-left: 20%;
+  height: 100%;
   @media (max-width: 950px) {
     margin-left: 0%;
   }

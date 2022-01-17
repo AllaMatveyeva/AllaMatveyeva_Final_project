@@ -20,7 +20,11 @@
     text-shadow: -1px -1px 0 rgb(39, 6, 6);
     transition: all 250ms linear;
   }
+
   &:last-child {
     margin-right: 0px;
   }
+}
+.actives {
+  background-color: var(--background-card);
 }

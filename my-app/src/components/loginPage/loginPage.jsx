@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+
 import {
   Card,
   CardContent,
@@ -10,42 +12,39 @@ import {
 
 import Loader from "../../api/loader";
 import authApi from "../../api/authApi";
+import { login as authLogin, setLoginStatus } from "../../store/auth/actions";
+import { LOADING, FAILED } from "../../constants/statuses";
 
 import "./loginPage.scss";
 import { withMe } from "../../hoc/withMe";
 
-const LoginPage = ({ me, setMe }) => {
+const LoginPage = () => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+
+  const account = useSelector((state) => state.auth.account);
+  const loginStatus = useSelector((state) => state.auth.loginStatus);
+
+  const loading = loginStatus === LOADING;
+  const error = loginStatus === FAILED;
+
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (me) {
+    if (!!account) {
       navigate("/");
     }
-  }, [me]);
+  }, [account]);
 
   const handleInput = (setFunction) => (e) => {
-    setError(false);
+    dispatch(setLoginStatus(null));
     setFunction(e.currentTarget.value);
   };
 
   const handleSubmit = () => {
-    setLoading(true);
-    authApi
-      .login(login, password)
-      .then((response) => {
-        setMe(response.data.user);
-      })
-      .catch((error) => {
-        setError(true);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    dispatch(authLogin(login, password));
   };
 
   return (
@@ -55,10 +54,10 @@ const LoginPage = ({ me, setMe }) => {
         <CardContent>
           {/* {error && <span>{error}</span>} */}
           <TextField
+            className="text-field"
             value={login}
             onChange={handleInput(setLogin)}
             error={!!error}
-            className="text-field"
             fullWidth
             label="Login"
             placeholder="Input name"
@@ -77,6 +76,7 @@ const LoginPage = ({ me, setMe }) => {
           />
 
           <Button
+            className="button-login"
             onClick={handleSubmit}
             endIcon={loading ? <Loader /> : undefined}
             disabled={loading || !!error}
@@ -89,4 +89,4 @@ const LoginPage = ({ me, setMe }) => {
   );
 };
 
-export default withMe(LoginPage);
+export default LoginPage;

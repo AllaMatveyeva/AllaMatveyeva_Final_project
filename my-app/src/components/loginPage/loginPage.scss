@@ -11,5 +11,22 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: var(--background-card);
+    color: var(--text);
   }
+}
+.MuiInputBase-input {
+  color: var(--text) !important;
+}
+.MuiInputBase-input::placeholder {
+  color: var(--text) !important;
+}
+label {
+  color: var(--text) !important;
+}
+.button-login {
+  color: var(--text) !important;
+}
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
+  border: 1px solid var(--text) !important ;
 }

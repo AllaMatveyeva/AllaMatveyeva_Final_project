@@ -10,4 +10,5 @@ export const translatesRu = {
   "footer.adress": "Aдрес",
   "footer.contact": "Kонтакты",
   "characters.text.greet": "Приветствую тебя, мой друг. Выбери букву!",
+  "not.letter": "Увы, на эту букву нет персонажа!",
 };

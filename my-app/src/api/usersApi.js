@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const getUsers = () =>
+export const getUsers = (token) =>
   axios.get("/api/users", {
     headers: {
-      Authentication: `Basic ${JSON.parse(localStorage.getItem("me"))?.token}`,
+      Authentication: `Basic ${token}`,
     },
   });

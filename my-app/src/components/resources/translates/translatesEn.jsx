@@ -10,4 +10,5 @@ export const translatesEn = {
   "footer.adress": "Adress",
   "footer.contact": "Contact",
   "characters.text.greet": "I greet you my friend. Choose a letter!",
+  "not.letter": "Alas, there is no character for this letter!",
 };
