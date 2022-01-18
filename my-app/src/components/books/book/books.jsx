@@ -8,7 +8,7 @@ import book_return from "../../../img/book_return.jpg";
 import "./books.scss";
 import { useEffect } from "react";
 
-const booksArr = [
+const booksArrFirst = [
   {
     Name: "The Hobbit, or There and Back Again",
     Author: "J.R.R. Tolkien",
@@ -28,6 +28,7 @@ const booksArr = [
     Read: "http://thefreeonlinenovel.com/bi/the-fellowship-of-the-ring",
     Buy: "https://www.amazon.com/s?k=the+fellowship+of+the+ring&i=stripbooks-intl-ship&crid=2S46B8U6UY0IW&sprefix=the+fello%2Cstripbooks-intl-ship%2C268&ref=nb_sb_ss_ts-doa-p_1_9",
   },
+
   {
     Name: "The Two Towers",
     Author: "J.R.R. Tolkien",
@@ -53,11 +54,11 @@ function Books(props) {
   useEffect(() => {
     localStorage.removeItem("letter");
   });
-  
+
   return (
     <>
       <div className="books-block">
-        {booksArr.map((book, index) => (
+        {booksArrFirst.map((book, index) => (
           <BookCard index={index} book={book} />
         ))}
       </div>
