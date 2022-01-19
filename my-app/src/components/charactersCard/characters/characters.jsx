@@ -2,20 +2,23 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import CharactersCard from "../charactersCard";
-import { getComers } from "../../../api/api";
 import Loader from "../../../api/loader";
-import { changeCharacters } from "../../../store/characters/actions";
-import { response } from "msw";
+import { fetchCharacters } from "../../../store/characters/actions";
 import { withTranslator } from "../../../hoc/withTranslator";
 import UsePagination from "../../../pagination/pagination";
+import { ERROR429, FAILED, LOADING } from "../../../constants/statuses";
 
 import "./characters.scss";
 
 function Characters(props) {
-  const [isError, setIsError] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
   const characters = useSelector((state) => state.characters.characters);
+  const fetchCharacterStatus = useSelector(
+    (state) => state.characters.fetchCharacterStatus
+  );
+  const isLoading = fetchCharacterStatus === LOADING;
+  const isError = fetchCharacterStatus === FAILED;
+  const isError429 = fetchCharacterStatus === ERROR429;
 
   const {
     firstContentIndex,
@@ -31,27 +34,13 @@ function Characters(props) {
   });
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await getComers(`${props.letter}`);
-        dispatch(changeCharacters(response.data.docs));
-      } catch (e) {
-        if (response.status === "429") {
-          setIsError("429");
-        } else {
-          setIsError(true);
-        }
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    fetchData();
-  }, [props.letter]);
+    dispatch(fetchCharacters(`${props.letter}`));
+  }, [`${props.letter}`]);
 
   return (
     <>
       {isLoading && <Loader />}
-      {isError === "429" && "Too many requests, please try again later."}
+      {isError429 && "Too many requests, please try again later."}
       {isError && "Error"}
       {!isLoading && !isError && characters.length === 0 ? (
         <span className="home__welcome home__welcome__text">
