@@ -1,4 +1,3 @@
-import { useEffect, useLayoutEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import { withTranslator } from "../../hoc/withTranslator";

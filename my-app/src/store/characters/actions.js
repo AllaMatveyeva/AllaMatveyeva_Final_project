@@ -1,5 +1,4 @@
 export const FETCH_CHARACTERS = "users/FETCH_CHARACTERS";
-
 export const SET_CHARACTERS = "characters/SET_CHARACTERS";
 export const SET_FETCH_CHARACTERS_STATUS =
   "characters/SET_FETCH_CHARACTERS_STATUS";

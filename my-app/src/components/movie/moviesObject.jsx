@@ -2,7 +2,6 @@ import MoviesCard from "./moviesCard";
 
 function MoviesObject(props) {
   const { movies } = props;
-  // console.log(movies);
 
   let hobbitSerries = {};
   let lordsSeries = {};

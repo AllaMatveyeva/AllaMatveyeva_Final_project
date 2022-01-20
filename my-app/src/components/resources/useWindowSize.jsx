@@ -1,9 +1,9 @@
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 
 function useWindowSize() {
   const [size, setSize] = useState(0);
-  useLayoutEffect(() => {
+  useEffect(() => {
     function updateSize() {
       setSize(window.screen.width);
     }

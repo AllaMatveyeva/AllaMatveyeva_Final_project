@@ -59,7 +59,7 @@ function Books(props) {
     <>
       <div className="books-block">
         {booksArrFirst.map((book, index) => (
-          <BookCard index={index} book={book} />
+          <BookCard key={index} book={book} />
         ))}
       </div>
     </>

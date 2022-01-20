@@ -4,7 +4,7 @@ import "./MoviecardModal.scss";
 
 function MoviecardModal(props) {
   const { onClose, target } = props;
-  console.log(props);
+
   return (
     <>
       <ModalWindow onClose={onClose}>

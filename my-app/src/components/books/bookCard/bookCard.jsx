@@ -4,7 +4,7 @@ import "./bookCard.scss";
 
 function BookCard(props) {
   const { index, book } = props;
-  console.log(props);
+
   const [showModal, setIsShowModal] = useState(false);
 
   return (

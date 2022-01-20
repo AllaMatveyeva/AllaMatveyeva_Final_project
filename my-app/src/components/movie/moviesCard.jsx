@@ -7,9 +7,8 @@ import { useState } from "react";
 import MoviecardModal from "./MoviecardModal";
 
 function MoviesCard(props) {
-  console.log(props);
   const { hobbitSerries, lordsSeries, titlesMoviesSeries } = props;
-  // console.log(hobbitSerries);
+
   const [showModal, setIsShowModal] = useState(false);
   const [target, setIsTarget] = useState("");
 
@@ -25,7 +24,7 @@ function MoviesCard(props) {
           {Object.entries(items).map((movie, index) => (
             <div
               className="userCard movies-block__item"
-              index={index}
+              key={index}
               onClick={() => [setIsShowModal(true), setIsTarget(movie[1].name)]}
             >
               <p className="movie-item movie-item_title">{movie[1].name}</p>

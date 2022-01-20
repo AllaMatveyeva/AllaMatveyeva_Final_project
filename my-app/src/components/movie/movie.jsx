@@ -19,7 +19,6 @@ function Movie(props) {
       try {
         const response = await getMovies();
         setMovies(response.data.docs);
-        console.log(response.data.docs);
       } catch (e) {
         setIsError(true);
       } finally {
