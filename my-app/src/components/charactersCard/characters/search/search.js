@@ -11,7 +11,13 @@ import { useState, useEffect } from "react";
 import RadioButtonsGroup from "./radioButtons/radioButtons";
 
 export default function CustomizedInputBase() {
-  const [click, setClick] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  window.addEventListener("click", (e) => {
+    e.target.closest(".wrap") || e.target.closest(".search-svg")
+      ? setOpen(true)
+      : setOpen(false);
+  });
 
   function Search() {
     return (
@@ -35,17 +41,18 @@ export default function CustomizedInputBase() {
 
   return (
     <div className="wrap">
-      {!click && (
+      {!open ? (
         <button
           className="search"
           onClick={() => {
-            setClick(true);
+            setOpen(true);
           }}
         >
-          <SearchIcon />
+          <SearchIcon className="search-svg" />
         </button>
+      ) : (
+        <Search></Search>
       )}
-      {click && <Search setClick={setClick} click={click}></Search>}
     </div>
   );
 }
