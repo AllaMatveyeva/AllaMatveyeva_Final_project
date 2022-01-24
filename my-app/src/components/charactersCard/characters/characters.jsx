@@ -9,6 +9,7 @@ import UsePagination from "../../../pagination/pagination";
 import { ERROR429, FAILED, LOADING } from "../../../constants/statuses";
 
 import "./characters.scss";
+import CustomizedInputBase from "./search/search";
 
 function Characters(props) {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ function Characters(props) {
 
   useEffect(() => {
     dispatch(fetchCharacters(`${props.letter}`));
+    console.log(characters);
   }, [`${props.letter}`]);
 
   return (
@@ -44,7 +46,7 @@ function Characters(props) {
       {isError && "Error"}
       {!isLoading && !isError && characters.length === 0 ? (
         <span className="home__welcome home__welcome__text">
-          {props.translate("not.letter")}
+          {/* {props.translate("not.letter")} */}
         </span>
       ) : (
         <>
@@ -79,6 +81,7 @@ function Characters(props) {
               &rarr;
             </button>
           </div>
+          <CustomizedInputBase />
         </>
       )}
     </>
