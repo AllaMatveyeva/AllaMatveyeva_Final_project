@@ -9,7 +9,7 @@ import UsePagination from "../../../pagination/pagination";
 import { ERROR429, FAILED, LOADING } from "../../../constants/statuses";
 
 import "./characters.scss";
-import CustomizedInputBase from "./search/search";
+import CustomizedInputBase from "./search/customizedInputBase";
 
 function Characters(props) {
   const dispatch = useDispatch();
@@ -46,7 +46,7 @@ function Characters(props) {
       {isError && "Error"}
       {!isLoading && !isError && characters.length === 0 ? (
         <span className="home__welcome home__welcome__text">
-          {/* {props.translate("not.letter")} */}
+          {props.translate("not.letter")}
         </span>
       ) : (
         <>

@@ -5,26 +5,34 @@ import CharactersCard from "../charactersCard/charactersCard";
 
 function Filtr(props) {
   const { optionId } = useParams();
-  console.log(optionId);
   const { valueId } = useParams();
-  console.log(valueId);
 
   const regexpValue = new RegExp(`^${valueId}`, "ig");
-  const regexpOption = new RegExp(`^${optionId}`, "ig");
 
   const charactersString = localStorage.getItem("characters");
   const characters = JSON.parse(charactersString);
-  console.log(characters);
 
-  const char = characters.filter((item) => item.name.match(regexpValue));
+  const charactersFiltr = characters.filter((item) =>
+    (optionId === "name" ? item.name : item.race).match(regexpValue)
+  );
+  const length = charactersFiltr.length;
 
-  console.log(char);
   return (
-    <ul className="users-block">
-      {char.map((user, index) => (
-        <CharactersCard key={user._id} user={user} index={index} />
-      ))}
-    </ul>
+    <>
+      {length === 0 && (
+        <span className="home__welcome home__welcome__text">
+          Unfortunately there is no character with that
+          {optionId === "name" ? " name" : " race"}
+        </span>
+      )}
+      {length > 0 && (
+        <ul className="users-block">
+          {charactersFiltr.map((user, index) => (
+            <CharactersCard key={user._id} user={user} index={index} />
+          ))}
+        </ul>
+      )}
+    </>
   );
 }
 
