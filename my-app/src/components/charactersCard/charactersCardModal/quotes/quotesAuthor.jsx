@@ -8,7 +8,7 @@ function quotesAuthor(id) {
   ) {
     return localStorage.getItem(`quotesAuthor_${id}`) || null;
   } else {
-    const characterWithId = charactersFromStore.characters.filter(
+    const characterWithId = charactersFromStore.characters.r(
       (item) => item._id === id
     );
     localStorage.setItem(`quotesAuthor_${id}`, characterWithId[0].name);

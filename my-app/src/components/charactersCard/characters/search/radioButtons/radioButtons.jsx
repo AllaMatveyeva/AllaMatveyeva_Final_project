@@ -5,13 +5,21 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import "./radioButtons.scss";
-export default function RadioButtonsGroup() {
+import store from "../../../../../store/store";
+export default function RadioButtonsGroup(props) {
+  const onChangeValue = (e) => {
+    props.setOption(e.target.value);
+  };
+  const charactersFromStore = store.getState().characters;
+  console.log(charactersFromStore.characters);
+
   return (
     <FormControl>
       <FormLabel id="demo-radio-buttons-group-label">Option</FormLabel>
       <RadioGroup
+        onChange={onChangeValue}
         aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="female"
+        defaultValue="name"
         name="radio-buttons-group"
         sx={{
           "& .MuiSvgIcon-root": {
@@ -20,14 +28,14 @@ export default function RadioButtonsGroup() {
         }}
       >
         <FormControlLabel
-          value="female"
+          value="name"
           control={<Radio />}
           label="Name"
           sx={{
             paddingBottom: 0,
           }}
         />
-        <FormControlLabel value="male" control={<Radio />} label="Race" />
+        <FormControlLabel value="race" control={<Radio />} label="Race" />
       </RadioGroup>
     </FormControl>
   );
