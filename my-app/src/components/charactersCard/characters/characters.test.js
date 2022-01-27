@@ -5,7 +5,6 @@ import { Provider } from "react-redux";
 import Characters from "../characters/characters";
 
 import store from "../../../store/store";
-import { getComers } from "../../../api/api";
 
 jest.mock("axios");
 jest.mock("../../../api/loader", () => () => <span>Loading</span>);
@@ -25,9 +24,9 @@ const renderWithRedux = (component) => ({
   ...render(<Provider store={store}>{component}</Provider>),
 });
 
-// afterEach(() => {
-//   cleanup();
-// });
+afterEach(() => {
+  cleanup();
+});
 
 let characters = {
   data: [
@@ -48,7 +47,7 @@ let characters = {
     },
   ],
 };
-const letter = "G";
+
 describe("Users Page", () => {
   describe("Response process", () => {
     test("Success response", async () => {
@@ -58,10 +57,6 @@ describe("Users Page", () => {
 
       const cards = await findAllByTestId("user-card");
       expect(cards).toHaveLength(2);
-      //const cards = await findAllByTestId("user-card");
-      // expect(cards).toHaveLength(2);
-      // expect(cards[0]).toHaveTextContent(/AlexName/i);
-      // expect(cards[1]).toHaveTextContent(/Tom/i);
     });
   });
 });

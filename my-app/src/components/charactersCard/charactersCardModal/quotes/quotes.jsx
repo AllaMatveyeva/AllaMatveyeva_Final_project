@@ -58,7 +58,9 @@ function Quotes() {
           !isError &&
           quotes
             .slice(firstContentIndex, lastContentIndex)
-            .map((quote, index) => <QuotesPage quote={quote} index={index} />)}
+            .map((quote, index, key) => (
+              <QuotesPage quote={quote} index={index} key={quote._id} />
+            ))}
       </ul>
       <div className="pagination">
         <button

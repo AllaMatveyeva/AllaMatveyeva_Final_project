@@ -11,13 +11,13 @@ import SearchValue from "./search";
 
 export default function CustomizedInputBase(props) {
   const [open, setOpen] = useState(false);
-  console.log(store.getState().characters);
+  //console.log(store.getState().characters);
+
   window.addEventListener("click", (e) => {
     e.target.closest(".wrap") || e.target.closest(".search-svg")
       ? setOpen(true)
       : setOpen(false);
   });
-  console.log(props.value);
 
   return (
     <div className="wrap">

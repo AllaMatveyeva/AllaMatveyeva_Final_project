@@ -17,7 +17,7 @@ function CharactersCardModal(props) {
   let key = user._id;
   console.log(user);
 
-  //localStorage.setItem(`character_${key}`, user.name);
+  localStorage.setItem(`character_${key}`, user.name);
 
   const [length, setLength] = useState("");
 

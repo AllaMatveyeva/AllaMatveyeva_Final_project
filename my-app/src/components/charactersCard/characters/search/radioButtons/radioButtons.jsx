@@ -10,8 +10,6 @@ export default function RadioButtonsGroup(props) {
   const onChangeValue = (e) => {
     props.setOption(e.target.value);
   };
-  const charactersFromStore = store.getState().characters;
-  console.log(charactersFromStore.characters);
 
   return (
     <FormControl>

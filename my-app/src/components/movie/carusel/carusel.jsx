@@ -60,7 +60,7 @@ function SwipeableTextMobileStepper(props) {
         enableMouseEvents
       >
         {props.images.map((step, index) => (
-          <div key={step[index]}>
+          <div key={step.index}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 onMouseOver={() => setPause(true)}

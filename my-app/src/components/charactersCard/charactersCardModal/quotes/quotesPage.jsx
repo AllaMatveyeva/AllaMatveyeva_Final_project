@@ -1,8 +1,6 @@
 import "./quotesPage.scss";
 
 function QuotesPage(props) {
-  console.log(props);
-
   return (
     <>
       <li className="quotes" index={props.index}>

@@ -44,6 +44,7 @@ function SearchValue(props) {
         onChange={handleChange}
       />
       <IconButton
+        className="link"
         type="submit"
         sx={{ p: "10px" }}
         aria-label="search characters"
