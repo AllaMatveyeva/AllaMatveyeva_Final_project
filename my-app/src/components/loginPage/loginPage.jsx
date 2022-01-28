@@ -11,12 +11,11 @@ import {
 } from "@mui/material";
 
 import Loader from "../../api/loader";
-import authApi from "../../api/authApi";
+
 import { login as authLogin, setLoginStatus } from "../../store/auth/actions";
 import { LOADING, FAILED } from "../../constants/statuses";
 
 import "./loginPage.scss";
-import { withMe } from "../../hoc/withMe";
 
 const LoginPage = () => {
   const [login, setLogin] = useState("");

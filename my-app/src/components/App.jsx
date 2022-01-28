@@ -14,6 +14,8 @@ import Movie from "./movie/movie";
 
 import LoginPage from "./loginPage/loginPage";
 import "./App.scss";
+import Filtr from "./filtr/filtr";
+import store from "../store/store";
 
 function App({ setThemeFromStore }) {
   const [me, setMeToState] = useState(JSON.parse(localStorage.getItem("me")));
@@ -35,6 +37,7 @@ function App({ setThemeFromStore }) {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="alphabet" element={<Alphabet />} />
+            <Route path="filtr/:optionId/:valueId" element={<Filtr />} />
             <Route path="books" element={<Books />} />
             <Route path="movies" element={<Movie />} />
             <Route path="characters/:id/quotes" element={<Quotes />} />

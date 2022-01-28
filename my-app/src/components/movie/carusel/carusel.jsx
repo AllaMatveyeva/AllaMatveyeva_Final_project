@@ -17,8 +17,6 @@ import { useState } from "react";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 function SwipeableTextMobileStepper(props) {
-  // console.log(props.images);
-
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = props.images.length;
@@ -62,7 +60,7 @@ function SwipeableTextMobileStepper(props) {
         enableMouseEvents
       >
         {props.images.map((step, index) => (
-          <div key={step[index]}>
+          <div key={step.index}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 onMouseOver={() => setPause(true)}

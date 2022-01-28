@@ -15,9 +15,9 @@ import male3 from "../../../img/male3.jpg";
 function CharactersCardModal(props) {
   const { user, index, onClose } = props;
   let key = user._id;
-  console.log(key);
+  console.log(user);
 
-  //localStorage.setItem(`character_${key}`, user.name);
+  localStorage.setItem(`character_${key}`, user.name);
 
   const [length, setLength] = useState("");
 
@@ -46,13 +46,20 @@ function CharactersCardModal(props) {
 
   return (
     <>
-      <ModalWindow title={`${user.name} `} onClose={onClose}>
+      <ModalWindow title={`${user.name}`} onClose={onClose}>
+        {!user.wikiUrl &&
+          (user.birth === "NaN" || user.birth === "") &&
+          (user.death === "NaN" || user.death === "") && (
+            <div className="user__no-data">
+              This character has no additional data!
+            </div>
+          )}
         {user.wikiUrl && (
           <a className="link" href={user.wikiUrl}>
             User profile
           </a>
         )}
-        <div className="user-img">
+        <div className="user-img" data-testid="modal">
           <GetImg index={index} />
         </div>
         {!(user.birth === "NaN" || user.birth === "") && (

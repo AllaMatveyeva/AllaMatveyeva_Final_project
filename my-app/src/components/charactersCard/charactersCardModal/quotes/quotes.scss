@@ -1,9 +1,6 @@
 .quotes-block {
   display: flex;
-  // flex-direction: column;
-  // align-content: space-around;
-  // max-width: 500px;
-  // margin: auto;
+  flex: 1 1 auto;
   flex-wrap: wrap;
 }
 .quotes-author {

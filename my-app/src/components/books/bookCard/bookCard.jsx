@@ -4,7 +4,7 @@ import "./bookCard.scss";
 
 function BookCard(props) {
   const { index, book } = props;
-  console.log(props);
+
   const [showModal, setIsShowModal] = useState(false);
 
   return (
@@ -14,8 +14,10 @@ function BookCard(props) {
         index={index}
         onClick={() => setIsShowModal(true)}
       >
-        <div className="bookCard__item bookCard__img-container">
-          <img className=" book__image" src={book.Image} alt="Book"></img>
+        <div className="bookCard__container">
+          <div className="bookCard__item bookCard__img-container">
+            <img className=" book__image" src={book.Image} alt="Book"></img>
+          </div>
           <p className="bookCard__item bookCard__title name">{book.Name}</p>
         </div>
       </div>

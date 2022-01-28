@@ -1,0 +1,32 @@
+.search {
+  border: none;
+  outline: none;
+  outline: none;
+  background: none;
+  max-width: 50px;
+  color: var(--text);
+
+  &:hover {
+    background: rgb(134, 61, 61);
+    border: 1px solid rgba(#000, 0.05);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: red;
+    text-shadow: -1px -1px 0 rgb(39, 6, 6);
+    transition: all 250ms linear;
+  }
+}
+.MuiPaper-root {
+  background: var(--background-card) !important;
+  margin-bottom: 10px;
+}
+.wrap {
+  max-width: 200px;
+  position: absolute;
+  top: 4%;
+  left: 15%;
+}
+form {
+  position: absolute;
+  top: 2%;
+  left: 15%;
+}

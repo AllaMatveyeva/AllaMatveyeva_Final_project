@@ -14,7 +14,6 @@ function Header(props) {
   const languageStorige = (lang) => {
     localStorage.setItem("lang", lang);
   };
-  console.log(props);
 
   const dispatch = useDispatch();
   const account = useSelector((state) => state.auth.account);

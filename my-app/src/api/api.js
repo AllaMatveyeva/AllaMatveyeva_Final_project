@@ -27,9 +27,3 @@ export const getMovies = () =>
       Authorization: "Bearer VE3TQswW4reG5Luwm85f",
     },
   });
-
-// fetch(`https://the-one-api.dev/v2/character/5cd99d4bde30eff6ebccfd06/quote`, {
-//   headers: {
-//     Authorization: "Bearer VE3TQswW4reG5Luwm85f",
-//   },
-// }).then((res) => res.json());
