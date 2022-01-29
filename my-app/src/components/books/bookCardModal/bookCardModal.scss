@@ -1,9 +1,7 @@
-.books-link {
-  // display: flex;
-}
 .books-link__item {
   margin-right: 15px;
   color: var(--text);
+  text-decoration: underline;
   &:last-child {
     margin-right: 0px;
   }

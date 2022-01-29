@@ -3,10 +3,10 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { NavLink } from "react-router-dom";
-import "./menuSmall.scss";
+import "./translate.scss";
 import { withTranslator } from "../../hoc/withTranslator";
 
-function MenuSmall(props) {
+function Translate(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -15,18 +15,21 @@ function MenuSmall(props) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const languageStorige = (lang) => {
+    localStorage.setItem("lang", lang);
+  };
 
   return (
     <div>
       <Button
-        className="menu-list"
+        className="menu-list translate"
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        {props.translate("menu.small")}
+        {props.translate("translate.lang")}
       </Button>
       <Menu
         id="basic-menu"
@@ -37,16 +40,29 @@ function MenuSmall(props) {
           "aria-labelledby": "basic-button",
         }}
       >
-        {props.links.map((link, index) => (
-          <MenuItem key={index} onClick={handleClose}>
-            <NavLink to={link.id} className="link">
-              {link.textId}
-            </NavLink>
-          </MenuItem>
-        ))}
+        <div className="translate-list" onClick={handleClose}>
+          <span
+            className="button-translate"
+            onClick={() => {
+              props.setLanguage("ru");
+              languageStorige("ru");
+            }}
+          >
+            {props.translate("button.ru")}
+          </span>
+          <span
+            className="button-translate"
+            onClick={() => {
+              props.setLanguage("en");
+              languageStorige("en");
+            }}
+          >
+            {props.translate("button.en")}
+          </span>
+        </div>
       </Menu>
     </div>
   );
 }
 
-export default withTranslator(MenuSmall);
+export default withTranslator(Translate);

@@ -6,14 +6,17 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import "./radioButtons.scss";
 import store from "../../../../../store/store";
-export default function RadioButtonsGroup(props) {
+import { withTranslator } from "../../../../../hoc/withTranslator";
+function RadioButtonsGroup(props) {
   const onChangeValue = (e) => {
     props.setOption(e.target.value);
   };
 
   return (
     <FormControl>
-      <FormLabel id="demo-radio-buttons-group-label">Option</FormLabel>
+      <FormLabel id="demo-radio-buttons-group-label">
+        {props.translate("radio.option")}
+      </FormLabel>
       <RadioGroup
         onChange={onChangeValue}
         aria-labelledby="demo-radio-buttons-group-label"
@@ -28,13 +31,18 @@ export default function RadioButtonsGroup(props) {
         <FormControlLabel
           value="name"
           control={<Radio />}
-          label="Name"
+          label={props.translate("radio.option.name")}
           sx={{
             paddingBottom: 0,
           }}
         />
-        <FormControlLabel value="race" control={<Radio />} label="Race" />
+        <FormControlLabel
+          value="race"
+          control={<Radio />}
+          label={props.translate("radio.option.race")}
+        />
       </RadioGroup>
     </FormControl>
   );
 }
+export default withTranslator(RadioButtonsGroup);

@@ -27,3 +27,12 @@ export const getMovies = () =>
       Authorization: "Bearer VE3TQswW4reG5Luwm85f",
     },
   });
+
+// http://localhost:4000/api/characters/5cd99d4bde30eff6ebccfea0/pic
+export const getAvatar = (id) =>
+  axios.get(`http://localhost:4000/api/characters/${id}/pic`, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "*",
+    },
+  });

@@ -11,11 +11,12 @@ import female3 from "../../../img/female3.jpg";
 import male1 from "../../../img/male1.jpg";
 import male2 from "../../../img/male2.jpg";
 import male3 from "../../../img/male3.jpg";
+import AvatarCharacters from "./avatar/avatar";
 
 function CharactersCardModal(props) {
   const { user, index, onClose } = props;
+
   let key = user._id;
-  console.log(user);
 
   localStorage.setItem(`character_${key}`, user.name);
 
@@ -55,13 +56,14 @@ function CharactersCardModal(props) {
             </div>
           )}
         {user.wikiUrl && (
-          <a className="link" href={user.wikiUrl}>
+          <a className="link modal-link" href={user.wikiUrl}>
             User profile
           </a>
         )}
-        <div className="user-img" data-testid="modal">
-          <GetImg index={index} />
-        </div>
+
+        {/* <GetImg index={index} /> */}
+        <AvatarCharacters id={key} />
+
         {!(user.birth === "NaN" || user.birth === "") && (
           <div className="user-birth">Birth: {user.birth}</div>
         )}

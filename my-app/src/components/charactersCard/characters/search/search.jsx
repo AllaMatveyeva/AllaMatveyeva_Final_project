@@ -13,20 +13,24 @@ import { NavLink } from "react-router-dom";
 import { Link } from "@mui/material";
 import store from "../../../../store/store";
 import { useSelector } from "react-redux";
+import { withTranslator } from "../../../../hoc/withTranslator";
 
 function SearchValue(props) {
   const [option, setOption] = useState("name");
   const [value, setValue] = useState("");
+  const characters = useSelector((state) => state.characters.characters);
+
   const handleChange = (event) => {
     setValue(event.target.value);
   };
 
-  const characters = useSelector((state) => state.characters.characters);
   const handleSubmit = (event) => {
+    if (value === "") {
+      event.preventDefault();
+    }
     return localStorage.setItem("characters", JSON.stringify(characters));
-
-    //event.preventDefault();
   };
+
   return (
     <Paper
       onSubmit={handleSubmit}
@@ -38,7 +42,7 @@ function SearchValue(props) {
       <RadioButtonsGroup setOption={setOption} />
       <InputBase
         sx={{ ml: 1, flex: 1 }}
-        placeholder="Search characters"
+        placeholder={props.translate("search.characters")}
         inputProps={{ "aria-label": "search characters" }}
         value={value}
         onChange={handleChange}
@@ -46,7 +50,7 @@ function SearchValue(props) {
       <IconButton
         className="link"
         type="submit"
-        sx={{ p: "10px" }}
+        sx={{ p: "10px", width: "15px" }}
         aria-label="search characters"
       >
         <SearchIcon />
@@ -55,4 +59,4 @@ function SearchValue(props) {
   );
 }
 
-export default SearchValue;
+export default withTranslator(SearchValue);
