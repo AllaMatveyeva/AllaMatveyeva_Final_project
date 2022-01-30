@@ -1,4 +1,3 @@
-import { response } from "msw";
 import { useEffect } from "react";
 import { useState } from "react";
 import { getAvatar } from "../../../../api/api";
@@ -15,7 +14,6 @@ function AvatarCharacters(props) {
       try {
         const response = await getAvatar(props.id);
         setAvatar(response.data);
-        console.log(response.data);
       } catch (e) {
         setIsError(true);
       } finally {

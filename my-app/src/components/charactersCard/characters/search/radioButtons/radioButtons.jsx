@@ -5,8 +5,8 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import "./radioButtons.scss";
-import store from "../../../../../store/store";
 import { withTranslator } from "../../../../../hoc/withTranslator";
+
 function RadioButtonsGroup(props) {
   const onChangeValue = (e) => {
     props.setOption(e.target.value);

@@ -1,6 +1,5 @@
-import { Routes, Route, Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import AuthContext from "./contexts/AuthContext";
+import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 
 import Footer from "./footer/footer";
 import Header from "./header/header";
@@ -15,16 +14,8 @@ import Movie from "./movie/movie";
 import LoginPage from "./loginPage/loginPage";
 import "./App.scss";
 import Filtr from "./filtr/filtr";
-import store from "../store/store";
 
 function App({ setThemeFromStore }) {
-  const [me, setMeToState] = useState(JSON.parse(localStorage.getItem("me")));
-
-  const setMe = (me) => {
-    localStorage.setItem("me", JSON.stringify(me));
-    setMeToState(me);
-  };
-
   useEffect(() => setThemeFromStore(), []);
 
   return (

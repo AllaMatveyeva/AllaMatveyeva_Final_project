@@ -1,8 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
 import { withTranslator } from "../../hoc/withTranslator";
-import { logout } from "../../store/auth/actions";
-import LoginPage from "../loginPage/loginPage";
 import useWindowSize from "../resources/useWindowSize";
 import "./footer.scss";
 import Login from "../header/login/login";

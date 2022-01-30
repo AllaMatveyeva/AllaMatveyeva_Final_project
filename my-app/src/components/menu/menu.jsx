@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 import { withTranslator } from "../../hoc/withTranslator";
 import MenuSmall from "../menuSmall/menuSmall";
 import useWindowSize from "../resources/useWindowSize";

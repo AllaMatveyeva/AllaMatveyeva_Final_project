@@ -1,7 +1,7 @@
 import store from "../../../../store/store";
 
 const charactersFromStore = store.getState().characters;
-console.log(charactersFromStore);
+
 function quotesAuthor(id) {
   if (
     charactersFromStore.characters.length === 0 ||

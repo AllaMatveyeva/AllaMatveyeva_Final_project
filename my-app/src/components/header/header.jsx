@@ -1,11 +1,7 @@
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-
 import { NavLink } from "react-router-dom";
-
 import { withTheme } from "../../hoc/theme";
-
 import { withTranslator } from "../../hoc/withTranslator";
-
 import Logotype from "../../img/logotype.png";
 import "./header.scss";
 import Translate from "./translate";
@@ -13,10 +9,6 @@ import Login from "./login/login";
 import useWindowSize from "../resources/useWindowSize";
 
 function Header(props) {
-  const languageStorige = (lang) => {
-    localStorage.setItem("lang", lang);
-  };
-
   return (
     <header className="header">
       <div className="header-item__img">

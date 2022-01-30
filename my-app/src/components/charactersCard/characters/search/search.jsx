@@ -1,19 +1,14 @@
 import * as React from "react";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
-
 import IconButton from "@mui/material/IconButton";
-
 import SearchIcon from "@mui/icons-material/Search";
-
-import "./customizedInputBase.scss";
-import { useState } from "react";
-import RadioButtonsGroup from "./radioButtons/radioButtons";
-import { NavLink } from "react-router-dom";
-import { Link } from "@mui/material";
-import store from "../../../../store/store";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+
+import RadioButtonsGroup from "./radioButtons/radioButtons";
 import { withTranslator } from "../../../../hoc/withTranslator";
+import "./customizedInputBase.scss";
 
 function SearchValue(props) {
   const [option, setOption] = useState("name");

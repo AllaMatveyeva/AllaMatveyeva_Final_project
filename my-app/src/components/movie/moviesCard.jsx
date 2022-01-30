@@ -12,7 +12,7 @@ function MoviesCard(props) {
   const [showModal, setIsShowModal] = useState(false);
   const [target, setIsTarget] = useState("");
 
-  function x(title, items) {
+  function moviesData(title, items) {
     return (
       <>
         <div className="quotes-author title-name">
@@ -53,9 +53,9 @@ function MoviesCard(props) {
 
   return (
     <>
-      {x(titlesMoviesSeries[1], hobbitSerries)}
+      {moviesData(titlesMoviesSeries[1], hobbitSerries)}
       <SwipeableTextMobileStepper images={imagesHobbit} className="carousel" />
-      {x(titlesMoviesSeries[2], lordsSeries)}
+      {moviesData(titlesMoviesSeries[2], lordsSeries)}
       <SwipeableTextMobileStepper images={imagesLord} className="carousel" />
       {showModal && (
         <MoviecardModal onClose={() => setIsShowModal(false)} target={target} />

@@ -47,23 +47,6 @@ const LoginPage = (props) => {
     dispatch(authLogin(login, password));
   };
 
-  useEffect(() => {
-    function fetchData() {
-      function searchClose(e) {
-        if (e.code === "ShiftRight" || e.code === "ShiftLeft") {
-        }
-      }
-      window.addEventListener("keydown", (e) => {
-        searchClose(e);
-      });
-      return window.removeEventListener("keydown", (e) => {
-        searchClose(e);
-      });
-    }
-
-    fetchData();
-  }, []);
-
   return (
     <div className="login-page">
       <Card className="users-page-card">

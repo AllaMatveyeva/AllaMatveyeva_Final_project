@@ -1,7 +1,6 @@
-import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { withTranslator } from "../../hoc/withTranslator";
-import store from "../../store/store";
+
 import CharactersCard from "../charactersCard/charactersCard";
 
 function Filtr(props) {

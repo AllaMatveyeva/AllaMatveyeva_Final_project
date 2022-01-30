@@ -4,30 +4,16 @@ import { Link } from "react-router-dom";
 import "./charactersCardModal.scss";
 
 import ModalWindow from "../../modalWindow/modal";
-
-import female1 from "../../../img/female1.jpg";
-import female2 from "../../../img/female2.jpg";
-import female3 from "../../../img/female3.jpg";
-import male1 from "../../../img/male1.jpg";
-import male2 from "../../../img/male2.jpg";
-import male3 from "../../../img/male3.jpg";
 import AvatarCharacters from "./avatar/avatar";
 
 function CharactersCardModal(props) {
-  const { user, index, onClose } = props;
+  const { user, onClose } = props;
 
   let key = user._id;
 
   localStorage.setItem(`character_${key}`, user.name);
 
   const [length, setLength] = useState("");
-
-  function GetImg(index) {
-    const arrImg = [];
-    arrImg.push(female1, male1, male2, male3, female2, female3);
-
-    return <img className="image" src={arrImg[index.index]} alt="Avatar"></img>;
-  }
 
   useEffect(() => {
     async function fetchData() {
@@ -61,7 +47,6 @@ function CharactersCardModal(props) {
           </a>
         )}
 
-        {/* <GetImg index={index} /> */}
         <AvatarCharacters id={key} />
 
         {!(user.birth === "NaN" || user.birth === "") && (

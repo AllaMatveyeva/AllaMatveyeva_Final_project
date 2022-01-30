@@ -1,14 +1,4 @@
-import {
-  all,
-  call,
-  put,
-  takeEvery,
-  take,
-  fork,
-  takeLeading,
-  spawn,
-  select,
-} from "redux-saga/effects";
+import { all, call, put, takeEvery, select } from "redux-saga/effects";
 import { getUsers } from "../../api/usersApi";
 import { FETCH_USERS, setFetchUsersStatus, setUsers } from "./actions";
 import { FAILED, LOADING, SUCCESS } from "../../constants/statuses";

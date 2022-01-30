@@ -44,7 +44,6 @@ function Quotes() {
         setIsLoading(false);
       }
     }
-
     fetchData();
   }, []);
 
