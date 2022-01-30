@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { withTranslator } from "../../hoc/withTranslator";
-
 import CharactersCard from "../charactersCard/charactersCard";
 
 function Filtr(props) {
@@ -15,7 +14,7 @@ function Filtr(props) {
   );
 
   const length = charactersFiltr.length;
-  console.log(charactersFiltr);
+
   return (
     <>
       {length === 0 && (

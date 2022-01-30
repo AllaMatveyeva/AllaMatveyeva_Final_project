@@ -27,9 +27,8 @@ function CharactersCardModal(props) {
         console.error();
       }
     }
-
     fetchData();
-  }, []);
+  });
 
   return (
     <>

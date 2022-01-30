@@ -22,8 +22,15 @@
 .wrap {
   max-width: 200px;
   position: absolute;
-  top: 1%;
-  left: 23%;
+  top: 13%;
+  left: 10%;
+  @media (max-width: 955px) {
+    left: 5%;
+  }
+  @media (max-width: 700px) {
+    top: 9%;
+    left: 30%;
+  }
 }
 
 form {
@@ -31,3 +38,6 @@ form {
   top: 2%;
   left: 15%;
 }
+
+// top: 1%;
+//   left: 23%;
