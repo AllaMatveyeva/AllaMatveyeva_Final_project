@@ -1,6 +1,6 @@
 .menu__buttons {
   max-width: 100px;
-  // margin: 100px;
+
   margin-left: 30px;
   position: absolute;
   top: 50%;
@@ -29,12 +29,6 @@
     margin-bottom: 0px;
   }
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-  // @media (max-width: 700px) {
-  //   &:last-child {
-  //     margin-bottom: 20px;
-  //   }
-  //   margin-right: 5px;
-  // }
 }
 
 .link {

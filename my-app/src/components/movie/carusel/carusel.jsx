@@ -24,11 +24,9 @@ function SwipeableTextMobileStepper(props) {
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
-
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
-
   const handleStepChange = (step) => {
     if (!pause) {
       setActiveStep(step);

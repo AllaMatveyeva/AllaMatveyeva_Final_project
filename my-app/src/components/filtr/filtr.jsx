@@ -1,6 +1,6 @@
-import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import store from "../../store/store";
+import { withTranslator } from "../../hoc/withTranslator";
+
 import CharactersCard from "../charactersCard/charactersCard";
 
 function Filtr(props) {
@@ -15,13 +15,15 @@ function Filtr(props) {
   );
 
   const length = charactersFiltr.length;
-
+  console.log(charactersFiltr);
   return (
     <>
       {length === 0 && (
         <span className="home__welcome home__welcome__text">
-          Unfortunately there is no character with that
-          {optionId === "name" ? " name" : " race"}
+          {props.translate("filter.no")}
+          {optionId === "name"
+            ? props.translate("filter.name")
+            : props.translate("filter.race")}
         </span>
       )}
       {length > 0 && (
@@ -35,4 +37,4 @@ function Filtr(props) {
   );
 }
 
-export default Filtr;
+export default withTranslator(Filtr);

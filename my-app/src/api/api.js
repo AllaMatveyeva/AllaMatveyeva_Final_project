@@ -7,13 +7,6 @@ export const getComers = (letter) =>
     },
   });
 
-export const makeUser = (id) =>
-  axios.get(`https://the-one-api.dev/v2/character/${id}`, {
-    headers: {
-      Authorization: "Bearer VE3TQswW4reG5Luwm85f",
-    },
-  });
-
 export const getQuotes = (id) =>
   axios.get(`https://the-one-api.dev/v2/character/${id}/quote`, {
     headers: {
@@ -25,5 +18,13 @@ export const getMovies = () =>
   axios.get(`https://the-one-api.dev/v2/movie`, {
     headers: {
       Authorization: "Bearer VE3TQswW4reG5Luwm85f",
+    },
+  });
+
+export const getAvatar = (id) =>
+  axios.get(`http://localhost:4000/api/characters/${id}/pic`, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "*",
     },
   });

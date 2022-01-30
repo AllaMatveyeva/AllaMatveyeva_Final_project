@@ -6,6 +6,7 @@ function MoviesObject(props) {
   let hobbitSerries = {};
   let lordsSeries = {};
   let titlesMoviesSeries = {};
+
   movies.forEach((movie) => {
     switch (movie.name) {
       case "The Hobbit Series":
@@ -32,6 +33,8 @@ function MoviesObject(props) {
       case "The Return of the King":
         lordsSeries[3] = movie;
         break;
+      default:
+        return "undefined";
     }
   });
 

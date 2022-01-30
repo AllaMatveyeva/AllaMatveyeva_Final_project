@@ -1,11 +1,13 @@
 import { withTranslator } from "../../hoc/withTranslator";
+import useWindowSize from "../resources/useWindowSize";
 import "./footer.scss";
+import Login from "../header/login/login";
 
 function Footer(props) {
   return (
     <footer className="footer">
-      <p className="text">{props.translate("footer.adress")}</p>
-      <p className="text">{props.translate("footer.contact")}</p>
+      <span className="text">alla.matveyeva.job@gmail.com</span>
+      {useWindowSize() <= 600 && <Login />}
     </footer>
   );
 }

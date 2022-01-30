@@ -16,8 +16,9 @@ import { login as authLogin, setLoginStatus } from "../../store/auth/actions";
 import { LOADING, FAILED } from "../../constants/statuses";
 
 import "./loginPage.scss";
+import { withTranslator } from "../../hoc/withTranslator";
 
-const LoginPage = () => {
+const LoginPage = (props) => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
@@ -49,17 +50,16 @@ const LoginPage = () => {
   return (
     <div className="login-page">
       <Card className="users-page-card">
-        <CardHeader title={"Login"} />
+        <CardHeader title={props.translate("loginPage.title")} />
         <CardContent>
-          {/* {error && <span>{error}</span>} */}
           <TextField
             className="text-field"
             value={login}
             onChange={handleInput(setLogin)}
             error={!!error}
             fullWidth
-            label="Login"
-            placeholder="Input name"
+            label={props.translate("loginPage.login")}
+            placeholder={props.translate("loginPage.inputName")}
             variant="outlined"
           />
           <TextField
@@ -69,8 +69,8 @@ const LoginPage = () => {
             className="text-field"
             fullWidth
             type="password"
-            placeholder="Input password"
-            label="Password"
+            placeholder={props.translate("loginPage.inputPassword")}
+            label={props.translate("loginPage.password")}
             variant="outlined"
           />
 
@@ -80,7 +80,7 @@ const LoginPage = () => {
             endIcon={loading ? <Loader /> : undefined}
             disabled={loading || !!error}
           >
-            Login
+            {props.translate("loginPage.button")}
           </Button>
         </CardContent>
       </Card>
@@ -88,4 +88,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default withTranslator(LoginPage);

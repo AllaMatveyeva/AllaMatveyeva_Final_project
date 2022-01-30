@@ -17,10 +17,12 @@
   display: block;
   padding-bottom: 10px;
 }
-.user-birth {
+.modal-link {
+  text-decoration: underline;
 }
 .quote-link {
   color: var(--text);
+  text-decoration: underline;
 }
 .user__no-data {
   font-size: 1.2rem;

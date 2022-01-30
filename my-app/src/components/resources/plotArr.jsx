@@ -314,6 +314,8 @@ function Plot(props) {
           </p>
         </>
       );
+    default:
+      return "undefined";
   }
 }
 
