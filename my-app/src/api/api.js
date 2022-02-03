@@ -28,3 +28,10 @@ export const getAvatar = (id) =>
       "Access-Control-Allow-Headers": "*",
     },
   });
+
+export const getCharacters = () =>
+  axios.get(`https://the-one-api.dev/v2/character`, {
+    headers: {
+      Authorization: "Bearer VE3TQswW4reG5Luwm85f",
+    },
+  });

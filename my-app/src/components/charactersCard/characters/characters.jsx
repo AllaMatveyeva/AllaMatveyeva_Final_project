@@ -80,7 +80,7 @@ function Characters(props) {
               &rarr;
             </button>
           </div>
-          <CustomizedInputBase />
+          {/* <CustomizedInputBase /> */}
         </>
       )}
     </>

@@ -21,6 +21,7 @@
 }
 .wrap {
   max-width: 200px;
+
   position: absolute;
   top: 13%;
   left: 10%;
@@ -36,13 +37,13 @@
     top: 9%;
     left: 30%;
   }
-}
 
-.MuiSvgIcon-root {
-  cursor: pointer;
-}
-form {
-  position: absolute;
-  top: 2%;
-  left: 15%;
+  .MuiSvgIcon-root {
+    cursor: pointer;
+  }
+  form {
+    position: absolute;
+    top: 2%;
+    left: 15%;
+  }
 }
