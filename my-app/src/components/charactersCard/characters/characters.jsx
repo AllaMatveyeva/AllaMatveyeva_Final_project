@@ -41,7 +41,7 @@ function Characters(props) {
   return (
     <>
       {isLoading && <Loader />}
-      {isError429 && <span> "Too many requests, please try again later."</span>}
+      {isError429 && <span>Too many requests, please try again later</span>}
       {isError && "Error"}
       {!isLoading && !isError && characters.length === 0 ? (
         <span className="home__welcome home__welcome__text">
