@@ -21,29 +21,12 @@
 }
 .wrap {
   max-width: 200px;
-
-  position: absolute;
-  top: 13%;
-  left: 10%;
-  padding: 5px;
-  background-color: var(--background-card);
-  border-radius: 10px;
+}
+.MuiSvgIcon-root {
   cursor: pointer;
-
-  @media (max-width: 955px) {
-    left: 5%;
-  }
-  @media (max-width: 700px) {
-    top: 9%;
-    left: 30%;
-  }
-
-  .MuiSvgIcon-root {
-    cursor: pointer;
-  }
-  form {
-    position: absolute;
-    top: 2%;
-    left: 15%;
-  }
+}
+form {
+  position: absolute;
+  top: 2%;
+  left: 15%;
 }

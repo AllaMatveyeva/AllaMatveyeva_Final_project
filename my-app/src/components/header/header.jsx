@@ -23,7 +23,7 @@ function Header(props) {
       </button>
 
       <Translate className="header__button" />
-      {useWindowSize() > 600 && <Login />}
+      {useWindowSize("width") > 600 && <Login />}
       <CustomizedInputBase />
       <LightModeOutlinedIcon
         className="header__button ligth-svg"

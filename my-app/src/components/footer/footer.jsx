@@ -7,7 +7,7 @@ function Footer(props) {
   return (
     <footer className="footer">
       <span className="text">alla.matveyeva.job@gmail.com</span>
-      {useWindowSize() <= 600 && <Login />}
+      {useWindowSize("width") <= 600 && <Login />}
     </footer>
   );
 }

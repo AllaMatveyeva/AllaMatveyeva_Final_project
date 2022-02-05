@@ -19,12 +19,13 @@ function SearchValue(props) {
     setValue(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  function handleSubmit(event) {
     if (value === "") {
       event.preventDefault();
     }
+    console.log("submit");
     return localStorage.setItem("characters", JSON.stringify(characters));
-  };
+  }
 
   return (
     <Paper

@@ -9,15 +9,15 @@ import CharactersCard from "../charactersCard/charactersCard";
 function Filtr(props) {
   const { optionId } = useParams();
   const { valueId } = useParams();
-  const regexpValue = new RegExp(`^${valueId}`, "ig");
+  // const regexpValue = new RegExp(`^${valueId}`, "ig");
 
   const [charactersAll, setCharactersAll] = useState([]);
 
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const charactersFiltr = charactersAll.filter((item) =>
-    (optionId === "name" ? item.name : item.race).match(regexpValue)
-  );
+  // const charactersFiltr = charactersAll.filter((item) =>
+  //   (optionId === "name" ? item.name : item.race).match(regexpValue)
+  // );
 
   const {
     firstContentIndex,
@@ -29,13 +29,14 @@ function Filtr(props) {
     totalPages,
   } = UsePagination({
     contentPerPage: 10,
-    count: charactersFiltr.length,
+    count: charactersAll.length,
   });
 
   useEffect(() => {
     async function fetchData() {
+      console.log("filter");
       try {
-        const response = await getCharacters();
+        const response = await getCharacters(optionId, valueId);
         setCharactersAll(response.data.docs);
       } catch (e) {
         setIsError(true);
@@ -44,15 +45,19 @@ function Filtr(props) {
       }
     }
     fetchData();
-  });
+  }, [optionId, valueId]);
 
   return (
     <>
       {isLoading && <Loader />}
       {isError && "Error"}
-      {!isLoading && !isError && (
+      {!isLoading && !isError && charactersAll.length === 0 ? (
+        <span className="home__welcome home__welcome__text">
+          {props.translate("filter.no")} {props.translate(`filter.${optionId}`)}
+        </span>
+      ) : (
         <ul className="users-block">
-          {charactersFiltr
+          {charactersAll
             .slice(firstContentIndex, lastContentIndex)
             .map((user, index) => (
               <CharactersCard key={user._id} user={user} index={index} />

@@ -17,7 +17,7 @@ app.get("/api/characters/:characterId/pic", (req, res) => {
   axios
     .get(`https://the-one-api.dev/v2/character/${req.characterId}`, {
       headers: {
-        Authorization: "Bearer VE3TQswW4reG5Luwm85f",
+        Authorization: "Bearer zNmTP2_vI0m9CoNNfoTy",
       },
     })
     .then((client_res) => {

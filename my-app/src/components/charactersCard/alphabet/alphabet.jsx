@@ -53,7 +53,8 @@ const Alphabet = (props) => {
                 className="change-letter__item helper"
                 src={helper}
                 alt="helper"
-              ></img>
+              />
+
               <span className="change-letter__item helper__text">
                 {props.translate("characters.text.greet")}
               </span>

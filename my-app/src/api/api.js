@@ -3,21 +3,21 @@ import axios from "axios";
 export const getComers = (letter) =>
   axios.get(`https://the-one-api.dev/v2/character?name=/^${letter}{1}./i`, {
     headers: {
-      Authorization: "Bearer VE3TQswW4reG5Luwm85f",
+      Authorization: "Bearer zNmTP2_vI0m9CoNNfoTy",
     },
   });
 
 export const getQuotes = (id) =>
   axios.get(`https://the-one-api.dev/v2/character/${id}/quote`, {
     headers: {
-      Authorization: "Bearer VE3TQswW4reG5Luwm85f",
+      Authorization: "Bearer zNmTP2_vI0m9CoNNfoTy",
     },
   });
 
 export const getMovies = () =>
   axios.get(`https://the-one-api.dev/v2/movie`, {
     headers: {
-      Authorization: "Bearer VE3TQswW4reG5Luwm85f",
+      Authorization: "Bearer zNmTP2_vI0m9CoNNfoTy",
     },
   });
 
@@ -29,9 +29,14 @@ export const getAvatar = (id) =>
     },
   });
 
-export const getCharacters = () =>
-  axios.get(`https://the-one-api.dev/v2/character`, {
-    headers: {
-      Authorization: "Bearer VE3TQswW4reG5Luwm85f",
-    },
-  });
+export const getCharacters = (option, value) => {
+  console.log("getCharacters");
+  return axios.get(
+    `https://the-one-api.dev/v2/character?${option}=/^${value}{1}./i`,
+    {
+      headers: {
+        Authorization: "Bearer zNmTP2_vI0m9CoNNfoTy",
+      },
+    }
+  );
+};
