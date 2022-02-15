@@ -1,11 +1,14 @@
+import { width } from "@mui/system";
 import { useEffect } from "react";
 import { useState } from "react";
 
-function useWindowSize() {
+function useWindowSize(param) {
   const [size, setSize] = useState(0);
   useEffect(() => {
     function updateSize() {
-      setSize(window.screen.width);
+      param === "width"
+        ? setSize(window.screen.width)
+        : setSize(window.screen.height);
     }
     window.addEventListener("resize", updateSize);
     updateSize();

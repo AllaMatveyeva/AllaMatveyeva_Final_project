@@ -16,7 +16,7 @@ import "./App.scss";
 import Filtr from "./filtr/filtr";
 
 function App({ setThemeFromStore }) {
-  useEffect(() => setThemeFromStore(), []);
+  useEffect(() => setThemeFromStore());
 
   return (
     <div className="App">

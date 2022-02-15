@@ -21,7 +21,7 @@ function* fetchCharactersWorker(action) {
     yield put(setCharacters(response.data.docs));
     yield put(setFetchCharactersStatus(SUCCESS));
   } catch (e) {
-    if (response === "Too Many Requests") {
+    if (e.response === "Too many requests, please try again later.") {
       yield put(setFetchCharactersStatus(ERROR429));
     } else {
       yield put(setFetchCharactersStatus(FAILED));

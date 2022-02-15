@@ -34,13 +34,7 @@ function Movie(props) {
       <div className="movies-block">
         {isLoading && <Loader />}
         {isError && "Error"}
-        {
-          !isLoading && !isError && <MoviesObject movies={movies} />
-
-          // movies.map((movie, index) => (
-          //   <MoviesObject movie={movie} index={index} />
-          // ))}
-        }
+        {!isLoading && !isError && <MoviesObject movies={movies} />}
       </div>
     </>
   );

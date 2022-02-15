@@ -18,7 +18,7 @@ export const withTheme = (Component) => (props) => {
 
   const toggleTheme = () => {
     let newTheme = theme === "dark" ? "light" : "dark";
-    console.log(newTheme);
+
     document.body.setAttribute("data-theme", newTheme);
     theme = newTheme;
     localStorage.setItem("theme", theme);

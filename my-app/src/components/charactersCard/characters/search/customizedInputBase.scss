@@ -21,11 +21,10 @@
 }
 .wrap {
   max-width: 200px;
-  position: absolute;
-  top: 1%;
-  left: 23%;
 }
-
+.MuiSvgIcon-root {
+  cursor: pointer;
+}
 form {
   position: absolute;
   top: 2%;

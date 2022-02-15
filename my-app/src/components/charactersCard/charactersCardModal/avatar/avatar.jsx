@@ -3,11 +3,11 @@ import { useState } from "react";
 import { getAvatar } from "../../../../api/api";
 import Loader from "../../../../api/loader";
 import React from "react";
+
 function AvatarCharacters(props) {
   const [avatar, setAvatar] = useState("");
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  console.log(props.id);
 
   useEffect(() => {
     async function fetchData() {
@@ -22,7 +22,7 @@ function AvatarCharacters(props) {
     }
 
     fetchData();
-  }, []);
+  });
 
   return (
     <div className="user-img">

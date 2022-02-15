@@ -10,10 +10,8 @@ import "./quotes.scss";
 import UsePagination from "../../../../pagination/pagination";
 
 function Quotes() {
-  console.log(useParams());
   const { id } = useParams();
 
-  console.log(id);
   const [quotes, setQuotes] = useState([]);
 
   const [isError, setIsError] = useState(false);
@@ -37,7 +35,6 @@ function Quotes() {
       try {
         const response = await getQuotes(id);
         setQuotes(response.data.docs);
-        console.log(response.data.docs);
       } catch (e) {
         setIsError(true);
       } finally {
@@ -45,7 +42,7 @@ function Quotes() {
       }
     }
     fetchData();
-  }, []);
+  }, [id]);
 
   return (
     <>

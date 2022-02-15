@@ -64,13 +64,12 @@ function Plot(props) {
             Jackson's The Lord of the Rings film trilogy.
           </p>
           <p className="story">
-            {" "}
             The film follows the titular character Bilbo Baggins as he
             accompanies Thorin Oakenshield and his fellow dwarves on a quest to
             reclaim the Lonely Mountain from the dragon Smaug. The film also
             features the vengeful pursuit of Azog the Defiler and Bolg, while
             Gandalf the Grey investigates a growing evil in the ruins of Dol
-            Guldur.{" "}
+            Guldur.
           </p>
           <p className="story">
             The ensemble cast includes Ian McKellen, Martin Freeman, Richard
@@ -105,7 +104,7 @@ function Plot(props) {
             altogether, they act as a prequel to Jackson's 'The Lord of the
             Rings' film trilogy. It was produced by New Line Cinema,
             Metro-Goldwyn-Mayer, Warner Bros. Pictures and WingNut Films. Warner
-            Bros. served also as the distributor.{" "}
+            Bros. served also as the distributor.
           </p>
           <p className="story">
             'The Battle of the Five Armies' premiered in London on 1 December
@@ -122,7 +121,6 @@ function Plot(props) {
             released after his death in 2015.
           </p>
           <p className="story">
-            {" "}
             The film received mixed reviews from critics and grossed over $962
             million worldwide, making it the second highest-grossing film of
             2014 (behind Transformers: Age of Extinction). At the 87th Academy
@@ -143,7 +141,6 @@ function Plot(props) {
             Philippa Boyens and Jackson.
           </p>
           <p className="story">
-            {" "}
             The film features an ensemble cast including Elijah Wood, Ian
             McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett,
             John Rhys-Davies, Billy Boyd, Dominic Monaghan, Orlando Bloom,
@@ -152,14 +149,13 @@ function Plot(props) {
             Return of the King'.
           </p>
           <p className="story">
-            {" "}
             Set in Middle-earth, the story tells of the Dark Lord Sauron, who
             seeks the One Ring, which contains part of his soul, in order to
             return to power. The Ring has found its way to the young hobbit
             Frodo Baggins. The fate of Middle-earth hangs in the balance as
             Frodo and eight companions (who form the Fellowship of the Ring)
             begin their journey to Mount Doom in the land of Mordor, the only
-            place where the Ring can be destroyed.{" "}
+            place where the Ring can be destroyed.
           </p>
           <p className="story">
             'The Fellowship of the Ring' was cofinanced and distributed by
@@ -170,7 +166,6 @@ function Plot(props) {
             on 19 December 2001.
           </p>
           <p className="story">
-            {" "}
             The film was acclaimed by critics and fans alike, who considered it
             to be a landmark in filmmaking and an achievement in the fantasy
             film genre. It received praise for its visual effects, performances,
@@ -190,7 +185,6 @@ function Plot(props) {
             and Best Visual Effects.
           </p>
           <p className="story">
-            {" "}
             In 2021, the film was selected for preservation in the United States
             National Film Registry by the Library of Congress for being
             culturally, historically, or aesthetically significant.
@@ -206,7 +200,7 @@ function Plot(props) {
             of J. R. R. Tolkien's 'The Lord of the Rings'. The film is the
             second instalment in the Lord of the Rings trilogy and was produced
             by Barrie M. Osborne, Fran Walsh and Jackson, from a screenplay by
-            Walsh, Philippa Boyens, Stephen Sinclair and Jackson.{" "}
+            Walsh, Philippa Boyens, Stephen Sinclair and Jackson.
           </p>
           <p className="story">
             The film features an ensemble cast including Elijah Wood, Ian
@@ -215,7 +209,7 @@ function Plot(props) {
             Monaghan, Orlando Bloom, Hugo Weaving, Miranda Otto, David Wenham,
             Brad Dourif, Karl Urban and Andy Serkis. It was preceded by The
             Fellowship of the Ring (2001) and followed by The Return of the King
-            (2003).{" "}
+            (2003).
           </p>
           <p className="story">
             Continuing the plot of The Fellowship of the Ring, the film
@@ -226,7 +220,7 @@ function Plot(props) {
             resurrected Gandalf, before fighting against the legions of the
             treacherous wizard Saruman at the Battle of Helm's Deep. Merry and
             Pippin escape capture, meet Treebeard the Ent, and help to plan an
-            attack on Isengard, fortress of Saruman.{" "}
+            attack on Isengard, fortress of Saruman.
           </p>
           <p className="story">
             'The Two Towers' was financed and distributed by American studio New
@@ -237,7 +231,6 @@ function Plot(props) {
             States, and on 19 December 2002 in New Zealand.
           </p>
           <p className="story">
-            {" "}
             The film was acclaimed by both critics and audiences, who considered
             it to be a landmark in filmmaking and an achievement in the fantasy
             film genre. It received praise for its direction, action sequences,
@@ -245,7 +238,7 @@ function Plot(props) {
             million worldwide, making it the highest-grossing film of 2002 and
             the third highest-grossing film of all time at the time of its
             release. Following subsequent reissues, it has, as of 2021, grossed
-            over $947 million.{" "}
+            over $947 million.
           </p>
           <p className="story">
             'The Two Towers', like the other films in the trilogy, is widely
@@ -268,7 +261,6 @@ function Plot(props) {
             Walsh, Philippa Boyens and Jackson.
           </p>
           <p className="story">
-            {" "}
             Continuing the plot of The Two Towers, Frodo, Sam and Gollum are
             making their final way toward Mount Doom in Mordor in order to
             destroy the One Ring, unaware of Gollum's true intentions, while
@@ -276,7 +268,6 @@ function Plot(props) {
             together against Sauron and his legions in Minas Tirith.
           </p>
           <p className="story">
-            {" "}
             It was preceded by 'The Fellowship of the Ring' (2001) and 'The Two
             Towers' (2002). The film features an ensemble cast including Elijah
             Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate
@@ -288,7 +279,6 @@ function Plot(props) {
             New Zealand, concurrently with the other two parts of the trilogy.
           </p>
           <p className="story">
-            {" "}
             It premiered on 1 December 2003 at the Embassy Theatre in Wellington
             and was theatrically released on 17 December 2003 in the United
             States, and on 18 December 2003 in New Zealand. The film was
@@ -302,7 +292,6 @@ function Plot(props) {
             by New Line Cinema.
           </p>
           <p className="story">
-            {" "}
             Like the other two entries in the Lord of the Rings film trilogy,
             The Return of the King is widely regarded as one of the greatest and
             most influential films ever made. The film received numerous

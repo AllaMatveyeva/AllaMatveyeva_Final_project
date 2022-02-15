@@ -13,7 +13,7 @@ function Menu(props) {
 
   return (
     <>
-      {useWindowSize() > 960 ? (
+      {useWindowSize("width") > 960 ? (
         <div className="menu__buttons">
           {links.map((link, index) => (
             <button key={index} className="menu__button">

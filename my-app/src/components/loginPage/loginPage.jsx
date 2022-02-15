@@ -36,7 +36,7 @@ const LoginPage = (props) => {
     if (!!account) {
       navigate("/");
     }
-  }, [account]);
+  }, [account, navigate]);
 
   const handleInput = (setFunction) => (e) => {
     dispatch(setLoginStatus(null));

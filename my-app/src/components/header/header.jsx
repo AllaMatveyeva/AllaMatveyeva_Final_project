@@ -7,6 +7,7 @@ import "./header.scss";
 import Translate from "./translate";
 import Login from "./login/login";
 import useWindowSize from "../resources/useWindowSize";
+import CustomizedInputBase from "../charactersCard/characters/search/customizedInputBase";
 
 function Header(props) {
   return (
@@ -22,8 +23,8 @@ function Header(props) {
       </button>
 
       <Translate className="header__button" />
-      {useWindowSize() > 600 && <Login />}
-
+      {useWindowSize("width") > 600 && <Login />}
+      <CustomizedInputBase />
       <LightModeOutlinedIcon
         className="header__button ligth-svg"
         onClick={() => props.toggleTheme()}

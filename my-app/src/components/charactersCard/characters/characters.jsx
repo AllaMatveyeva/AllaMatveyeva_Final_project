@@ -41,7 +41,7 @@ function Characters(props) {
   return (
     <>
       {isLoading && <Loader />}
-      {isError429 && "Too many requests, please try again later."}
+      {isError429 && <span>Too many requests, please try again later</span>}
       {isError && "Error"}
       {!isLoading && !isError && characters.length === 0 ? (
         <span className="home__welcome home__welcome__text">
@@ -80,7 +80,7 @@ function Characters(props) {
               &rarr;
             </button>
           </div>
-          <CustomizedInputBase />
+          {/* <CustomizedInputBase /> */}
         </>
       )}
     </>
