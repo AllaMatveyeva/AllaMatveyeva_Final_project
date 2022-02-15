@@ -20,7 +20,7 @@ function CharactersCardModal(props) {
       try {
         fetch(`https://the-one-api.dev/v2/character/${user._id}/quote`, {
           headers: {
-            Authorization: "Bearer zNmTP2_vI0m9CoNNfoTy",
+            Authorization: "Bearer f2fasD1wxgx7aUFZVNq7",
           },
         }).then((res) => res.json().then((res) => setLength(+res.docs.length)));
       } catch (e) {
